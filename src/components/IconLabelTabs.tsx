@@ -24,9 +24,10 @@ export default function IconLabelTabs() {
       display: 'flex',
       alignItems: 'center',
       borderRadius: '10px',
+      backgroundColor: "rgb(10 10 10)"
     }}>
 
-      <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example" sx={{ maxWidth: '150vw' }} TabIndicatorProps={{
+      <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example" sx={{ maxWidth: ' 150vw' }} TabIndicatorProps={{
         style: {
           backgroundColor: "rgb(124 45 18)"
         }
