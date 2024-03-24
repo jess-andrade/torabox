@@ -1,12 +1,16 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Home from '@/components/Home'
+import About from '@/components/About'
+// import Contact from '@/components/Contact'
+// import Footer from '@/components/Footer'
+// import Projects from '@/components/Projects'
+import Layout from '@/components/Layout'
 
-const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
-      <p>escreve algo aq Gisa: oi </p>
-    </div>
-  )
+    <Layout>
+      <Home />
+      <About />
+    </Layout>
+  );
 }
