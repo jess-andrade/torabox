@@ -3,6 +3,11 @@ import * as React from "react";
 
 export default function Home() {
   return (
-    <>home page</>
+    <>
+      <div className='min-w-full min-h-screen bg-zinc-900'>
+        home page
+      </div>
+
+    </>
   )
 }
