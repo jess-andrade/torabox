@@ -4,6 +4,7 @@ import About from '@/components/About'
 // import Footer from '@/components/Footer'
 import Projects from '@/components/Projects'
 import Layout from '@/components/Layout'
+import Services from '@/components/Services';
 
 
 export default function HomePage() {
@@ -11,7 +12,8 @@ export default function HomePage() {
     <Layout>
       <Home />
       <About />
-      <Projects/>
+      <Services />
+      <Projects />
     </Layout>
   );
 }
