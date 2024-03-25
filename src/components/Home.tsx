@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <section id="home">
-        <div className='min-w-full min-h-screen bg-zinc-900 flex flex-col items-center'>
+        <div className="bg-[url('../../public/tijolos.jpg')] bg-fixed">
 
           {/* content */}
           <div className='flex flex-row items-center place-content-evenly pt-24 '>

@@ -2,7 +2,7 @@ import Home from '@/components/Home'
 import About from '@/components/About'
 // import Contact from '@/components/Contact'
 // import Footer from '@/components/Footer'
-// import Projects from '@/components/Projects'
+import Projects from '@/components/Projects'
 import Layout from '@/components/Layout'
 
 
@@ -11,6 +11,7 @@ export default function HomePage() {
     <Layout>
       <Home />
       <About />
+      <Projects/>
     </Layout>
   );
 }
