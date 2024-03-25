@@ -11,7 +11,7 @@ export default function Home() {
 
       <section id="home">
         {/* main container */}
-        <div className="flex bg-[url('../../public/blackbricks4.png')] min-w-full min-h-screen">
+        <div className="flex bg-[url('../../public/greybricks.png')] min-w-full min-h-screen">
 
           {/* content */}
           <div className='flex wrap flex-row items-center place-content-evenly '>

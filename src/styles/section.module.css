@@ -1,9 +1,9 @@
 .sectionright {
   position: relative;
-  background-color: #f9fafb;
+  background-color: #fca04f;
   overflow: hidden;
   width: 100%;
-  height: 200px;
+  height: 108px;
   /* adjustable height */
   transform: skewY(-4deg);
   /* adjustable angle */
@@ -12,10 +12,10 @@
 
 .sectionleft {
   position: relative;
-  background-color: #f9fafb;
+  background-color: #181b17;
   overflow: hidden;
   width: 100%;
-  height: 110px;
+  height: 108px;
   /* adjustable height */
   transform: skewY(4deg);
   /* adjustable angle */

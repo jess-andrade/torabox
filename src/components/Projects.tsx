@@ -4,12 +4,12 @@ import * as React from "react";
 import toraboxlogo from '../../public/torabox-logo.png'
 import styles from '../styles/section.module.css'
 
-export default function About() {
+export default function projects() {
   return (
     <>
       <section id="projects">
 
-        <div className="bg-[url('../../public/tijolos.jpg')] bg-fixed min-w-full min-h-screen">
+        <div className="bg-[url('../../public/greybricks.png')] bg-fixed min-w-full min-h-screen">
           <div className='text-white font-bold text-4xl pt-4 text-center mt-10'> PROJECTS</div>
           <div className="flex justify-center mt-10">
             <div className="bg-white m-10 w-1/3 h-80 rounded-lg ">

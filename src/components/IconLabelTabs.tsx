@@ -26,14 +26,14 @@ export default function IconLabelTabs() {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-around',
-      backgroundColor: "rgb(10 10 10)",
+      backgroundColor: '#181b17',
       borderBottomLeftRadius: '10px',
       borderBottomRightRadius: '10px'
     }}>
 
 
       {/* ------ torabox text */}
-      <p className='text-white tracking-[.40em] text-amber-400 '>TORABOX.</p>
+      <p className='text-white tracking-[.40em] text-[#fca04f] '>TORABOX.</p>
 
 
       {/* ------ icons */}
@@ -44,9 +44,10 @@ export default function IconLabelTabs() {
       }}>
         <Tab icon={<HomeIcon style={{ color: value === 0 ? 'orange' : 'white' }} />} href='#home' />
         <Tab icon={<PersonPinIcon style={{ color: value === 1 ? 'orange' : 'white' }} />} href='#about' />
-        <Tab icon={<BubbleChartIcon style={{ color: value === 0 ? 'orange' : 'white' }} />} href='#services' />
+        <Tab icon={<BubbleChartIcon style={{ color: value === 4 ? 'orange' : 'white' }} />} href='#services' />
         <Tab icon={<CollectionsBookmarkIcon style={{ color: value === 2 ? 'orange' : 'white' }} />} href='#projects' />
         <Tab icon={<AlternateEmailIcon style={{ color: value === 3 ? 'orange' : 'white' }} />} href='#contact' />
+
 
       </Tabs>
     </AppBar >
