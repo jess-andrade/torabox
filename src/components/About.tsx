@@ -14,33 +14,33 @@ export default function About() {
     <>
       <section id="about">
         {/* main container */}
-        <div className='min-w-ful min-h-[460px] bg-[#fca04f] '>
+        <div className='min-w-ful min-h-[350px] bg-[#fca04f]  text-[#181b17]'>
 
           {/* inclinated section */}
           <section className={styles.sectionright} />
 
           {/* content */}
-          <div className='flex wrap flex-row items-center place-content-evenly'>
+          <div className='flex wrap flex-row items-center place-content-evenly justify-self-center text-justify '>
 
             {/* mission */}
-            <div className='flex wrap flex-col items-center max-w-sm gap-4'>
+            <div className='flex wrap flex-col items-center max-w-80 gap-4'>
               <RocketLaunchIcon fontSize='large' />
               <h1 className='font-bold tracking-[.24em]'>MISSÃO</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at eleifend enim. Cras efficitur ultrices leo sed ultrices. Pellentesque placerat nibh a augue euismod, vitae sodales neque pellentesque</p>
+              <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at eleifend enim. Cras efficitur ultrices leo sed ultrices. Pellentesque placerat nibh a augue euismod, vitae sodales neque pellentesque</p>
             </div>
 
             {/* values */}
-            <div className='flex wrap flex-col items-center max-w-sm gap-4'>
+            <div className='flex wrap flex-col items-center max-w-80 gap-4'>
               <VolunteerActivismIcon fontSize='large' />
               <h1 className='font-bold tracking-[.24em]'>VALORES</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at eleifend enim. </p>
+              <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at eleifend enim. Phasellus at eleifend enim. Phasellus at eleifend enim. </p>
             </div>
 
             {/* vision */}
-            <div className='flex wrap flex-col items-center max-w-sm gap-4'>
+            <div className='flex wrap flex-col items-center max-w-80 gap-4'>
               <VisibilityIcon fontSize='large' />
               <h1 className='font-bold tracking-[.24em]'>VISÃO</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at eleifend enim. Cras efficitur ultrices leo sed ultrices. </p>
+              <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at eleifend enim. Cras efficitur ultrices leo sed ultrices. </p>
 
             </div>
 
@@ -48,7 +48,7 @@ export default function About() {
 
         </div>
 
-        <section className={styles.sectionleft} />
+        <section className={styles.sectionright} />
 
       </section >
     </>
