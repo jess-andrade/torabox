@@ -33,10 +33,10 @@ export default function IconLabelTabs() {
           backgroundColor: "rgb(124 45 18)"
         }
       }}>
-        <Tab icon={<HomeIcon style={{ color: value === 0 ? 'orange' : 'white' }}  />} href='#home' />
-        <Tab icon={<PersonPinIcon style={{ color: value === 1 ? 'orange' : 'white' }}/>} href='#about' />
-        <Tab icon={<CollectionsBookmarkIcon style={{ color: value === 2 ? 'orange' : 'white' }}/>} href='#projects' />
-        <Tab icon={<AlternateEmailIcon style={{ color: value === 3 ? 'orange' : 'white' }}/>} href='#contact' />
+        <Tab icon={<HomeIcon style={{ color: value === 0 ? 'orange' : 'white' }} />} href='#home' />
+        <Tab icon={<PersonPinIcon style={{ color: value === 1 ? 'orange' : 'white' }} />} href='#about' />
+        <Tab icon={<CollectionsBookmarkIcon style={{ color: value === 2 ? 'orange' : 'white' }} />} href='#projects' />
+        <Tab icon={<AlternateEmailIcon style={{ color: value === 3 ? 'orange' : 'white' }} />} href='#contact' />
 
       </Tabs>
     </AppBar>

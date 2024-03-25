@@ -1,0 +1,34 @@
+.sectionright {
+  position: relative;
+  background-color: #f9fafb;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  /* adjustable height */
+  transform: skewY(-4deg);
+  /* adjustable angle */
+  transform-origin: top left;
+}
+
+.sectionleft {
+  position: relative;
+  background-color: #f9fafb;
+  overflow: hidden;
+  width: 100%;
+  height: 110px;
+  /* adjustable height */
+  transform: skewY(4deg);
+  /* adjustable angle */
+  transform-origin: top right;
+}
+
+
+.ccontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(5deg);
+  /* Ajuste o ângulo de inclinação oposto para corrigir o conteúdo */
+  text-align: center;
+  z-index: 2;
+}
