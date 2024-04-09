@@ -1,18 +1,27 @@
 import * as React from 'react';
+import Image from 'next/image';
+
+// MUI imports 
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+
+//my imports 
+import boxclosed from '../../public/boxclosed.png'
+import boxopened from '../../public/boxopened.png'
 
 const steps = ['Quem somos?', 'Por que escolher a Torabox?', 'Processo comercial'];
 
 export default function NewStepper() {
+
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState<{
     [k: number]: boolean;
   }>({});
+
+  const [box, setBox] = React.useState(false)
 
   const totalSteps = () => {
     return steps.length;
@@ -23,14 +32,23 @@ export default function NewStepper() {
   };
 
 
-
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
           <Step key={label} completed={completed[index]}>
             <StepButton color="inherit" onClick={handleStep(index)}>
+
+              <Image
+                className='w-32'
+                onClick={() => setBox(prevMode => !prevMode)}
+                src={box ? boxclosed : boxopened}
+                alt="box-closed"
+                priority={false}
+              />
               {label}
+
+
             </StepButton>
           </Step>
         ))}
