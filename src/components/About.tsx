@@ -16,7 +16,7 @@ export default function About() {
     <>
       <section id="about">
         {/* main container */}
-        <div className='min-w-ful min-h-[410px] bg-[#fca04f]  text-[#181b17]'>
+        <div className='min-w-ful min-h-[410px] bg-slate-100  text-[#181b17]'>
 
           {/* inclinated section */}
           <section className={styles.sectionright} />
