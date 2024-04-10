@@ -12,6 +12,7 @@ import { Button } from "@mui/material";
 //my imports
 import boxclosed from "../../public/boxclosed.png";
 import boxopened from "../../public/boxopened.png";
+import MyCard from './MyCard';
 
 const steps = [
   {
@@ -79,15 +80,15 @@ export default function NewStepper() {
         <React.Fragment>
           {activeStep === 0 ? (
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1} - texto 1
+              <MyCard text='texto 01' />
             </Typography>
           ) : activeStep === 1 ? (
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1} - texto 2
+              <MyCard text='texto 02' />
             </Typography>
           ) : (
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1} - texto 3
+              <MyCard text='texto 03' />
             </Typography>
           )}
         </React.Fragment>
