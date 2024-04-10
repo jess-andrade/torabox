@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head >
         {/* <link rel="icon" href="/favicon.ico" /> */}
-        <title> Torabox </title>
+        {/* <title> Torabox </title> */}
       </Head>
       <body>
         <Main />
