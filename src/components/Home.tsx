@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 //-- my imports 
 import toraboxlogo from '../../public/torabox-logo.png'
 
-
 export default function Home() {
   return (
     <>

@@ -17,14 +17,20 @@ import MyCard from './MyCard';
 const steps = [
   {
     text: "Quem somos?",
+    title: "Somos uma equipe de programadores motivados e dedicados, prontos para te ajudar a desenvolver soluções tecnológicas sob medida, que impulsionem o seu negócio e atendam às suas necessidades específicas.",
+    description: "01 Lorem ipsum dolor sit amet. Aut voluptas quisquam in consequatur iusto ad voluptas accusantium. Et voluptas modi ea facere nihil sit maiores nemo sed sint consectetur cum velit dolorum.Non cupiditate enim ut voluptatem nulla qui dignissimos nostrum et voluptatem perferendis. Ad laborum placeat et earum doloribus vel soluta voluptatem ab dolorem distinctio est maxime rerum? Quo soluta eaque ea omnis ipsam vel dicta sapiente qui dolor porro.Ab illo numquam eos rerum totam sit suscipit harum. Est tenetur quia est laborum reiciendis aut sequi sint qui iste ipsa id aliquid minima sit ipsum corporis. Quo impedit enim et ratione incidunt ut voluptatibus corrupti id delectus quia sit dolorem animi",
     value: 0,
   },
   {
     text: "Por que a Torabox?",
+    title: "title 02",
+    description: "02 Lorem ipsum dolor sit amet. Aut voluptas quisquam in consequatur iusto ad voluptas accusantium. Et voluptas modi ea facere nihil sit maiores nemo sed sint consectetur cum velit dolorum.Non cupiditate enim ut voluptatem nulla qui dignissimos nostrum et voluptatem perferendis. Ad laborum placeat et earum doloribus vel soluta voluptatem ab dolorem distinctio est maxime rerum? Quo soluta eaque ea omnis ipsam vel dicta sapiente qui dolor porro.Ab illo numquam eos rerum totam sit suscipit harum. Est tenetur quia est laborum reiciendis aut sequi sint qui iste ipsa id aliquid minima sit ipsum corporis. Quo impedit enim et ratione incidunt ut voluptatibus corrupti id delectus quia sit dolorem animi",
     value: 1,
   },
   {
     text: "Processo comercial",
+    title: "title 03",
+    description: "03 Lorem ipsum dolor sit amet. Aut voluptas quisquam in consequatur iusto ad voluptas accusantium. Et voluptas modi ea facere nihil sit maiores nemo sed sint consectetur cum velit dolorum.Non cupiditate enim ut voluptatem nulla qui dignissimos nostrum et voluptatem perferendis. Ad laborum placeat et earum doloribus vel soluta voluptatem ab dolorem distinctio est maxime rerum? Quo soluta eaque ea omnis ipsam vel dicta sapiente qui dolor porro.Ab illo numquam eos rerum totam sit suscipit harum. Est tenetur quia est laborum reiciendis aut sequi sint qui iste ipsa id aliquid minima sit ipsum corporis. Quo impedit enim et ratione incidunt ut voluptatibus corrupti id delectus quia sit dolorem animi",
     value: 2,
   },
 ];
@@ -46,7 +52,17 @@ export default function NewStepper() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+
+    <Box sx={{
+      width: "100%",
+      display: 'flex',
+      flexDirection: 'col',
+      maxWidth: "100%",
+      flexWrap: 'wrap',
+      placeContent: 'space-evenly',
+      alignItems: 'center',
+    }}>
+
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((step, index) => (
           <Step key={step.text} completed={completed[index]}>
@@ -76,23 +92,25 @@ export default function NewStepper() {
           </Step>
         ))}
       </Stepper>
+
+
       <div>
         <React.Fragment>
           {activeStep === 0 ? (
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              <MyCard text='texto 01' />
+              <MyCard title={steps[0].title} text={steps[0].description} />
             </Typography>
           ) : activeStep === 1 ? (
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              <MyCard text='texto 02' />
+              <MyCard title={steps[1].title} text={steps[1].description} />
             </Typography>
           ) : (
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              <MyCard text='texto 03' />
+              <MyCard title={steps[2].title} text={steps[2].description} />
             </Typography>
           )}
         </React.Fragment>
       </div>
-    </Box>
+    </Box >
   );
 }
