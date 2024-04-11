@@ -3,6 +3,8 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createTheme } from '@mui/material';
 
+import '../styles/embla.css'
+import '../styles/base.css'
 
 import Layout from "../components/Layout";
 // import { boxOpenedContext } from '@/context/boxOpenedContext';
