@@ -16,7 +16,7 @@ export default function Home() {
           {/* content */}
           <div className='flex min-w-full flex-row items-center justify-center'>
 
-            <div className='flex wrap gap-x-52 '>
+            <div className='flex flex-wrap gap-y-20 gap-x-52 '>
 
               {/* title, subtitle and text */}
               <motion.div

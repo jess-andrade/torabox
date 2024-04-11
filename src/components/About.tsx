@@ -23,7 +23,7 @@ export default function About() {
 
 
           {/* content */}
-          <div className='flex wrap flex-row items-start place-content-evenly text-justify pb-3.5'>
+          <div className='flex flex-wrap flex-row items-start place-content-evenly text-justify gap-x-4 gap-y-10 pb-3.5'>
 
             {/* mission */}
             <div className='flex flex-col items-center max-w-80 gap-6'>

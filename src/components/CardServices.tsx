@@ -25,11 +25,12 @@ const bull = (
   </Box>
 );
 
-export default function MyCard({ text, title }: CardProps) {
+export default function CardServices({ text, title }: CardProps) {
   return (
 
     <Card sx={{
-      minHeight: 300,
+      minHeight: 200,
+      minWidth: 600,
       backgroundColor: '#242424',
       maxWidth: 1000,
       color: '#f1f5f9',
@@ -41,12 +42,7 @@ export default function MyCard({ text, title }: CardProps) {
         flexDirection: 'row',
         gap: 4,
       }}>
-        <Image
-          className="w-40"
-          src={cat}
-          alt="cat"
-          priority={false}
-        />
+
 
         <div className='flex flex-col gap-4'>
           <Typography variant="h5" component="div">
