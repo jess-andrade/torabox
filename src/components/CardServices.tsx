@@ -14,6 +14,7 @@ import cat from '../../public/cat.jpg'
 interface CardProps {
   text: String,
   title: String,
+  icon: any,
 }
 
 const bull = (
@@ -25,7 +26,7 @@ const bull = (
   </Box>
 );
 
-export default function CardServices({ text, title }: CardProps) {
+export default function CardServices({ text, title, icon }: CardProps) {
   return (
 
     <Card sx={{
@@ -45,9 +46,12 @@ export default function CardServices({ text, title }: CardProps) {
 
 
         <div className='flex flex-col gap-4'>
-          <Typography variant="h5" component="div">
-            {title}
-          </Typography>
+          <div className='flex flex-row gap-4'>
+            {icon}
+            <Typography variant="h5" component="div">
+              {title}
+            </Typography>
+          </div>
           <Typography variant="body2">
             {text}
           </Typography>
