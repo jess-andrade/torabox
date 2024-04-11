@@ -14,13 +14,15 @@ export default function About2() {
 
       <section id="services">
         {/* main container */}
-        <div className="flex min-w-full min-h-screen">
+        <div className="flex min-w-full min-h-screen items-center justify-center">
 
           {/* content */}
-          <div className='flex wrap min-w-full flex-row items-center justify-center'>
-            <div className='flex gap-x-52 '>
-              <NewStepper />
-            </div>
+          <div className='flex wrap min-w-full flex-row'>
+
+
+            <NewStepper />
+
+
           </div>
         </div>
 

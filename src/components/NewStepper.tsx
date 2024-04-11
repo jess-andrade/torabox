@@ -59,8 +59,9 @@ export default function NewStepper() {
       flexDirection: 'col',
       maxWidth: "100%",
       flexWrap: 'wrap',
-      placeContent: 'space-evenly',
       alignItems: 'center',
+      justifyContent: 'center',
+      gap: 6,
     }}>
 
       <Stepper nonLinear activeStep={activeStep} sx={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
@@ -94,20 +95,15 @@ export default function NewStepper() {
       </Stepper>
 
 
-      <div>
+      <div className='flex items-center justify-center '>
         <React.Fragment>
           {activeStep === 0 ? (
-            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              <MyCard title={steps[0].title} text={steps[0].description} />
-            </Typography>
+            <MyCard title={steps[0].title} text={steps[0].description} />
           ) : activeStep === 1 ? (
-            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              <MyCard title={steps[1].title} text={steps[1].description} />
-            </Typography>
+            <MyCard title={steps[1].title} text={steps[1].description} />
           ) : (
-            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              <MyCard title={steps[2].title} text={steps[2].description} />
-            </Typography>
+            <MyCard title={steps[2].title} text={steps[2].description} />
+
           )}
         </React.Fragment>
       </div>

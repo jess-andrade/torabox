@@ -30,8 +30,9 @@ export default function MyCard({ text, title }: CardProps) {
 
     <Card sx={{
       minHeight: 300,
+      minWidth: 600,
       backgroundColor: '#242424',
-      maxWidth: 1000,
+      maxWidth: '80%',
       color: '#f1f5f9',
       padding: 5,
 
@@ -41,13 +42,6 @@ export default function MyCard({ text, title }: CardProps) {
         flexDirection: 'row',
         gap: 4,
       }}>
-        <Image
-          className="w-40"
-          src={cat}
-          alt="cat"
-          priority={false}
-        />
-
         <div className='flex flex-col gap-4'>
           <Typography variant="h5" component="div">
             {title}

@@ -20,6 +20,7 @@ export default function IconLabelTabs() {
   };
 
   return (
+
     <AppBar style={{
       position: "fixed",
       display: 'flex',
@@ -27,8 +28,6 @@ export default function IconLabelTabs() {
       alignItems: 'center',
       justifyContent: 'space-around',
       backgroundColor: '#181b17',
-      borderBottomLeftRadius: '10px',
-      borderBottomRightRadius: '10px'
     }}>
 
 
