@@ -17,9 +17,10 @@ export default function Projects() {
     <>
       <section id="projects">
         {/* main container */}
-        <div className="flex bg-slate-100 min-w-full min-h-screen text-black">
+        <div className="flex flex-col bg-slate-100 min-w-full min-h-screen text-black items-center justify-center">
           {/* content */}
-          <div className='flex min-w-full items-center justify-center '>
+          <h1 className='text-2xl tracking-[.24em] font-bold pb-20'>PORTFÓLIO</h1>
+          <div className='flex flex-wrap gap-4'>
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
