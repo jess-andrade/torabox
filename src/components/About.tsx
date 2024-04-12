@@ -10,8 +10,14 @@ import MyStepper from './MyStepper';
 import styles from '../styles/section.module.css'
 import NewStepper from './NewStepper';
 
+//-- famer motion
+import { motion, useScroll } from "framer-motion"
+
 
 export default function About() {
+
+  const { scrollYProgress } = useScroll();
+
   return (
     <>
       <section id="about">
@@ -25,32 +31,51 @@ export default function About() {
           {/* content */}
           <div className='flex flex-wrap flex-row items-start place-content-evenly text-justify gap-x-4 gap-y-10 pb-3.5'>
 
-            {/* mission */}
-            <div className='flex flex-col items-center max-w-80 gap-6'>
-              <RocketLaunchIcon fontSize='large' />
-              <h1 className='font-bold tracking-[.24em]'>MISSÃO</h1>
-              <p className='text-sm'>Nossa missão é capacitar indivíduos e empresas por meio da tecnologia, fornecendo soluções inovadoras e personalizadas que impulsionem o crescimento, promovam a eficiência e facilitem a realização de objetivos.</p>
-            </div>
+            <motion.div
+              // style={{ scaleY: scrollYProgress }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              {/* mission */}
+              <div className='flex flex-col items-center max-w-80 gap-6'>
+                <RocketLaunchIcon fontSize='large' />
+                <h1 className='font-bold tracking-[.24em]'>MISSÃO</h1>
+                <p className='text-sm'>Nossa missão é capacitar indivíduos e empresas por meio da tecnologia, fornecendo soluções inovadoras e personalizadas que impulsionem o crescimento, promovam a eficiência e facilitem a realização de objetivos.</p>
+              </div>
+            </motion.div>
 
-            {/* values */}
-            <div className='flex flex-col items-center max-w-80 gap-4'>
-              <VolunteerActivismIcon fontSize='large' />
-              <h1 className='font-bold tracking-[.24em]'>VALORES</h1>
-              <p className='text-sm'>Colaboração, Comprometimento, Inovação e Aprendizado contínuo </p>
+            <motion.div
+              // style={{ scaleY: scrollYProgress }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              {/* values */}
+              <div className='flex flex-col items-center max-w-80 gap-4'>
+                <VolunteerActivismIcon fontSize='large' />
+                <h1 className='font-bold tracking-[.24em]'>VALORES</h1>
+                <p className='text-sm'>Colaboração, Comprometimento, Inovação e Aprendizado contínuo </p>
+              </div>
+            </motion.div>
 
-
-            </div>
-
-            {/* vision */}
-            <div className='flex flex-col items-center max-w-80 gap-4'>
-              <VisibilityIcon fontSize='large' />
-              <h1 className='font-bold tracking-[.24em]'>VISÃO</h1>
-              <p className='text-sm'> Almejamos um futuro onde nossa equipe seja reconhecida por sua capacidade de transformar desafios em oportunidades e criar impacto positivo através da tecnologia. </p>
-
-            </div>
+            <motion.div
+              // style={{ scaleY: scrollYProgress }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              {/* vision */}
+              <div className='flex flex-col items-center max-w-80 gap-4'>
+                <VisibilityIcon fontSize='large' />
+                <h1 className='font-bold tracking-[.24em]'>VISÃO</h1>
+                <p className='text-sm'> Almejamos um futuro onde nossa equipe seja reconhecida por sua capacidade de transformar desafios em oportunidades e criar impacto positivo através da tecnologia. </p>
+              </div>
+            </motion.div>
           </div>
           <MyStepper />
-        </div>
+
+        </div >
 
         <section className={styles.sectionright} />
 

@@ -7,6 +7,8 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+//-- framer motion imports
+import { motion, useScroll } from "framer-motion"
 
 //my imports 
 import cat from '../../public/cat.jpg'
@@ -58,7 +60,7 @@ export default function CardServices({ text, title, icon }: CardProps) {
         </div>
       </CardContent>
 
-
     </Card >
+
   );
 }
