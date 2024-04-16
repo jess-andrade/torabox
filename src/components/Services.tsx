@@ -42,10 +42,10 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[450px] bg-slate-100  text-[#181b17] max-w-full">
+        <div className="min-h-[450px] bg-[#ffffff] text-[#181b17] max-w-full pb-10">
 
           {/* inclinated section */}
-          <section className={styles.sectionright} />
+          <section className={styles.sectionrightwhite} />
 
           {/* content */}
           <div className="flex min-w-full items-center flex-col justify-center">
@@ -60,7 +60,7 @@ export default function Services() {
 
             {/* cards */}
 
-            <div className="flex flex-wrap items-center justify-center flex-row gap-10">
+            <div className="flex flex-wrap items-center justify-center flex-row gap-10 pb-10">
 
               {/* ------ card 01 */}
               <motion.div
@@ -102,7 +102,7 @@ export default function Services() {
               </motion.div>
 
               {/* ------ card 04 */}
-              <motion.div
+              {/* <motion.div
                 initial={{ y: 100, scale: 0.8, opacity: 0 }}
                 whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -112,8 +112,12 @@ export default function Services() {
                   text={content[3].text}
                   icon={content[3].icon}
                 />
-              </motion.div>
+              </motion.div> */}
             </div>
+
+            <button className='bg-[#fca04f] p-3 rounded text-[#181b17] text-sm font-bold'>
+              FALE CONOSCO »
+            </button>
 
           </div>
         </div>

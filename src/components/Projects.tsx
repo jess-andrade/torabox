@@ -19,16 +19,18 @@ export default function Projects() {
       <section id="projects">
 
         {/* main container */}
-        <div className="flex flex-col bg-slate-100 min-w-full min-h-screen text-black items-center justify-center">
+        <div className="flex flex-row bg-[#242424] min-w-full min-h-[500px] text-black items-center justify-center pb-10">
 
           {/* content */}
 
           {/* title */}
-          <h1 className='text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4 pt-20'>PORTFÓLIO</h1>
+          <h1 className='text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4 pt-20'>PORTFÓLIO</h1>
+
           {/* subtitle w typewriter */}
-          <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
+          {/* <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
             <Typewriter text="Conheça nossos projetos" delay={200} delayEnd={3000} />
-          </div>
+          </div> */}
+
           <div className='flex flex-wrap gap-4'>
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
