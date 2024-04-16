@@ -1,37 +1,32 @@
-import * as React from "react";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-interface typewriteProps {
-  text: string,
-  speed: number,
+interface TypewriterProps {
+  text: string;
+  delay: number;
+  delayEnd: number;
 }
 
-const useTypewriter = (text, speed = 50) => {
-  const [displayText, setDisplayText] = useState('');
+const Typewriter = ({ text, delay, delayEnd }: TypewriterProps) => {
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let i = 0;
-    const typingInterval = setInterval(() => {
-      if (i < text.length) {
-        setDisplayText(prevText => prevText + text.charAt(i));
-        i++;
-      } else {
-        clearInterval(typingInterval);
+    const timeout = setTimeout(async () => {
+      if (currentIndex < text.length) {
+        setCurrentText((prevText) => prevText + text[currentIndex]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
       }
-    }, speed);
+      if (currentIndex == text.length) {
+        await setTimeout(() => {
+          setCurrentIndex(0);
+          setCurrentText("");
+        }, delayEnd);
+      }
+    }, delay);
+    return () => clearTimeout(timeout);
+  }, [currentIndex, delay, text, delayEnd]);
 
-    return () => {
-      clearInterval(typingInterval);
-    };
-  }, [text, speed]);
-
-  return displayText;
-};
-
-const Typewriter = (text, speed) => {
-  const displayText = useTypewriter(text, speed);
-
-  return <p>{displayText} nada</p>;
+  return <span>{currentText}</span>;
 };
 
 export default Typewriter;
