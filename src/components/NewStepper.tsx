@@ -77,23 +77,22 @@ export default function NewStepper() {
             <StepButton color="inherit" onClick={handleStep(index)}>
               {activeStep == step.value ? (
                 <Image
-                  className="w-24"
+                  className={`w-24 pl-${Math.floor(step.title.length / 2)}`}
                   onClick={() => setBox((prevMode) => !prevMode)}
                   src={boxopened}
-                  alt="box-closed"
+                  alt="box-opened"
                   priority={false}
                 />
               ) : (
                 <Image
-                  className="w-24"
+                  className={`w-24 pl-${Math.floor(step.title.length / 2)}`}
                   onClick={() => setBox((prevMode) => !prevMode)}
                   src={boxclosed}
                   alt="box-closed"
                   priority={false}
                 />
               )}
-
-              {step.text}
+              <span className="text-white">{step.text}</span>
             </StepButton>
           </Step>
         ))}
