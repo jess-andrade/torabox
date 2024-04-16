@@ -18,9 +18,8 @@ export default function UsCard({ img, name, subtitle, description }: ImageProps)
         flexWrap: 'wrap',
         '& > :not(style)': {
           m: 1,
-          width: 400,
-          height: 300,
-          padding: 1,
+          maxWidth: 400,
+          padding: 2,
           borderRadius: 7,
           backgroundColor: '#ffffff',
 
@@ -28,7 +27,7 @@ export default function UsCard({ img, name, subtitle, description }: ImageProps)
       }}
     >
       <Paper elevation={2} >
-        <div className='flex flex-row flex-wrap gap-4 items-center '>
+        <div className='flex flex-row flex-wrap gap-4 items-center justify-center '>
 
           {/* <Paper elevation={9} sx={{ backgroundColor: '#fca04f' }}> */}
 
@@ -39,7 +38,7 @@ export default function UsCard({ img, name, subtitle, description }: ImageProps)
 
           <div className='flex flex-col min-w-52'>
             <h1 className='text-xl font-bold pb-2'>{name}</h1>
-            <h1 className='text-sm font-bold pb-2 text-[#a6a29e]'>{subtitle}</h1>
+            <h1 className='text-sm font-bold pb-2 text-[#F9B477]'>{subtitle}</h1>
           </div>
           <p className='text-sm '>{description}</p>
 

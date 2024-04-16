@@ -44,25 +44,24 @@ export default function Home() {
 
 
         {/* main container */}
-        <div className="flex bg-[#ffff] min-w-full min-h-80 pt-10">
+        <div className="flex flex-col bg-[#ffff] min-w-full min-h-80 pt-10 justify-center ">
 
-          {/* content */}
-          <div className='flex flex-wrap min-w-full flex-row items-center justify-center'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.9 }}
+          >
+            {/* content */}
+            <div className='flex flex-wrap min-w-full flex-row items-center justify-center'>
 
+              <UsCard img={us[0].img} name={us[0].name} subtitle={us[0].subtitle} description={us[0].description} />
 
-            <UsCard img={us[0].img} name={us[0].name} subtitle={us[0].subtitle} description={us[0].description} />
+              <UsCard img={us[1].img} name={us[1].name} subtitle={us[1].subtitle} description={us[1].description} />
 
+              <UsCard img={us[2].img} name={us[2].name} subtitle={us[2].subtitle} description={us[2].description} />
+            </div>
 
-
-            <UsCard img={us[1].img} name={us[1].name} subtitle={us[1].subtitle} description={us[1].description} />
-
-
-
-            <UsCard img={us[2].img} name={us[2].name} subtitle={us[2].subtitle} description={us[2].description} />
-
-
-
-          </div>
+          </motion.div>
 
         </div>
       </section >

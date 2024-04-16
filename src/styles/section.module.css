@@ -4,7 +4,7 @@
   background-color: #f1f5f9;
   overflow: hidden;
   width: 100%;
-  height: 108px;
+  height: 135px;
   /* adjustable height */
   transform: skewY(-4deg);
   /* adjustable angle */
@@ -14,10 +14,10 @@
 /* TRUE WHITE */
 .sectionrightwhite {
   position: relative;
-  background-color: #ffffff;
+  background-color: #f1f5f9;
   overflow: hidden;
   width: 100%;
-  height: 108px;
+  height: 135px;
   /* adjustable height */
   transform: skewY(-4deg);
   /* adjustable angle */

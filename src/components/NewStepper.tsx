@@ -59,9 +59,8 @@ export default function NewStepper() {
       sx={{
         width: "100%",
         display: "flex",
-        flexDirection: "col",
+        flexDirection: "column",
         maxWidth: "100%",
-        flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center",
         gap: 6,
@@ -74,10 +73,11 @@ export default function NewStepper() {
       >
         {steps.map((step, index) => (
           <Step key={step.text} completed={completed[index]}>
-            <StepButton color="inherit" onClick={handleStep(index)}>
+            <StepButton
+              onClick={handleStep(index)}>
               {activeStep == step.value ? (
                 <Image
-                  className="w-24"
+                  className="w-32"
                   onClick={() => setBox((prevMode) => !prevMode)}
                   src={boxopened}
                   alt="box-closed"
@@ -85,21 +85,20 @@ export default function NewStepper() {
                 />
               ) : (
                 <Image
-                  className="w-24"
+                  className="w-32"
                   onClick={() => setBox((prevMode) => !prevMode)}
                   src={boxclosed}
                   alt="box-closed"
                   priority={false}
                 />
               )}
-
               {step.text}
             </StepButton>
           </Step>
         ))}
       </Stepper>
 
-      <div className="flex items-center justify-center ">
+      <div className='flex items-center justify-center'>
         <React.Fragment>
           {activeStep === 0 ? (
             <MyCard title={steps[0].title} text={steps[0].description} />
@@ -110,6 +109,6 @@ export default function NewStepper() {
           )}
         </React.Fragment>
       </div>
-    </Box>
+    </Box >
   );
 }

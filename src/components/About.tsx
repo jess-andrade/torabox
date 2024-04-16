@@ -69,7 +69,7 @@ export default function About() {
               </div>
             </motion.div>
           </div>
-          <MyStepper />
+          {/* <MyStepper /> */}
         </div >
 
         <section className={styles.sectionright} />
