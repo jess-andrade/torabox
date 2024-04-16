@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 //--MUI imports
 import LanguageIcon from '@mui/icons-material/Language';
@@ -10,6 +11,7 @@ import HighlightAltIcon from '@mui/icons-material/HighlightAlt';
 //-- my imports 
 import CardServices from './CardServices'
 import styles from '../styles/section.module.css'
+import Typewriter from './Typewriter';
 
 //-- card content
 const content = [
@@ -51,7 +53,13 @@ export default function Services() {
           <div className='flex min-w-full items-center flex-col justify-center'>
 
             {/* title */}
-            <h1 className='text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-20'>NOSSOS SERVIÇOS</h1>
+            <h1 className='text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4'>NOSSOS SERVIÇOS</h1>
+            {/* subtitle */}
+            {/* <h2 className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10'>
+              <MyTypewriter text='Como podemos te ajudar?' />
+            </h2> */}
+            <h2><Typewriter text='te amo meu bem' speed={50} /></h2>
+
 
             {/* cards */}
             <div className='flex flex-wrap items-center justify-center flex-row gap-10 w-full m-w-60'>
