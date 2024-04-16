@@ -37,9 +37,6 @@ export default function CardServices({ text, title, icon }: CardProps) {
       maxWidth: 1000,
       color: '#242424',
       padding: 5,
-      border: 2,
-      borderColor: '#fca04f'
-
     }}>
       <CardContent sx={{
         display: 'flex',
@@ -52,9 +49,9 @@ export default function CardServices({ text, title, icon }: CardProps) {
           <div className='flex flex-row gap-4'>
             {icon}
             <Typography
-              variant="h5"
+              variant="h6"
               component="div"
-              color='#fca04f'
+              color='#242424'
               fontWeight='bold'
             >
               {title}

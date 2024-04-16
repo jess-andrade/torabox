@@ -18,7 +18,7 @@ export default function About2() {
         <div className="flex min-w-full min-h-[700px] items-center justify-center">
 
           {/* content */}
-          <div className='flex wrap min-w-full flex-row'>
+          <div className='flex flex-row min-w-full'>
             <NewStepper />
           </div>
         </div>

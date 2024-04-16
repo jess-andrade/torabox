@@ -16,19 +16,19 @@ import Typewriter from "./Typewriter";
 //-- card content
 const content = [
   {
-    title: "Site",
+    title: "SITE",
     text: "01 lorem ipsum",
-    icon: <LanguageIcon />,
+    icon: <LanguageIcon color='primary' />,
   },
   {
-    title: "Aplicativo Mobile",
+    title: "MOBILE",
     text: "02 lorem ipsum",
-    icon: <PhoneIphoneIcon />,
+    icon: <PhoneIphoneIcon color='primary' />,
   },
   {
-    title: "Prototipação de Projeto",
+    title: "DESIGN",
     text: "03 lorem ipsum",
-    icon: <HighlightAltIcon />,
+    icon: <HighlightAltIcon color='primary' />,
   },
   {
     title: "Análise",
@@ -42,10 +42,10 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[450px] bg-[#ffffff] text-[#181b17] max-w-full pb-10">
+        <div className="min-h-[450px] bg-[#f1f5f9] text-[#181b17] max-w-full pb-10">
 
           {/* inclinated section */}
-          <section className={styles.sectionrightwhite} />
+          <section className={styles.sectionright} />
 
           {/* content */}
           <div className="flex min-w-full items-center flex-col justify-center">
@@ -115,7 +115,7 @@ export default function Services() {
               </motion.div> */}
             </div>
 
-            <button className='bg-[#fca04f] p-3 rounded text-[#181b17] text-sm font-bold'>
+            <button className='bg-[#F9B477] p-3 rounded text-[#242424] text-sm font-bold'>
               FALE CONOSCO »
             </button>
 

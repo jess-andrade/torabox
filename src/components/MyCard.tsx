@@ -31,11 +31,12 @@ export default function MyCard({ text, title }: CardProps) {
 
     <Card sx={{
       minHeight: 200,
-      minWidth: 500,
-      backgroundColor: '#242424',
-      maxWidth: '80%',
+      minWidth: 300,
+      backgroundColor: 'transparent',
+      maxWidth: '70%',
       color: '#f1f5f9',
       padding: 4,
+      alignItems: 'center'
 
     }}>
       <CardContent sx={{
@@ -43,7 +44,7 @@ export default function MyCard({ text, title }: CardProps) {
         flexDirection: 'row',
         gap: 4,
       }}>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 items-center justify-center'>
           <Typography variant="h5" component="div">
             {title}
           </Typography>
