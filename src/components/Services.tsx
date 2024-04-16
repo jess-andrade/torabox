@@ -51,11 +51,11 @@ export default function Services() {
           <div className="flex min-w-full items-center flex-col justify-center">
 
             {/* title */}
-            <h1 className="text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4"> Nossos Serviços </h1>
+            <h1 className="text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4"> NOSSOS SERVIÇOS </h1>
 
             {/* subtitle w typewriter */}
             <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
-              <Typewriter text="como podemos te ajudar ?" delay={200} delayEnd={1500} />
+              <Typewriter text="como podemos te ajudar ?" delay={200} delayEnd={3000} />
             </div>
 
             {/* cards */}

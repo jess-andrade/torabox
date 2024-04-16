@@ -33,7 +33,7 @@ export default function CardServices({ text, title, icon }: CardProps) {
 
     <Card sx={{
       minWidth: 600,
-      backgroundColor: 'rgb(210, 210, 209, 0.3)',
+      backgroundColor: '#ffffff',
       maxWidth: 1000,
       color: '#242424',
       padding: 5,

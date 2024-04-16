@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+
 import { EmblaOptionsType } from 'embla-carousel'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import {
@@ -7,10 +9,25 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
+import { Paper } from '@mui/material'
+import PaperProjects from './PaperProjects'
 
 type PropType = {
   slides: number[]
   options?: EmblaOptionsType
+}
+
+// -- Images
+import cat from '../../public/cat.jpg'
+import otter from '../../public/otter.png'
+import bolsa from '../../public/bolsa.png'
+import festa from '../../public/festa.jpg'
+
+const images = {
+  1: <Image src={cat} alt='cat' width={400} height={300} />,
+  2: <Image src={bolsa} alt='bolsa' width={400} height={300} />,
+  3: <Image src={otter} alt='otter' width={400} height={300} />,
+  4: <Image src={festa} alt='otter' width={400} height={300} />
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
@@ -33,7 +50,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+              {/* <div className="embla__slide__number">{index + 1} </div> */}
+
+              {/* --- image */}
+              <PaperProjects img={images[index + 1]} />
+
             </div>
           ))}
         </div>
