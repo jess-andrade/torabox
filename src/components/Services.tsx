@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion"
 
 //--MUI imports
 import LanguageIcon from "@mui/icons-material/Language";
@@ -43,49 +43,81 @@ export default function Services() {
       <section id="services">
         {/* main container */}
         <div className="min-h-[450px] bg-slate-100  text-[#181b17] max-w-full">
+
           {/* inclinated section */}
           <section className={styles.sectionright} />
 
           {/* content */}
           <div className="flex min-w-full items-center flex-col justify-center">
+
             {/* title */}
-            <h1 className="text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4">
-              Nossos Serviços
-            </h1>
-            {/* subtitle */}
-            {/* <h2 className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10'>
-              <MyTypewriter text='Como podemos te ajudar?' />
-            </h2> */}
+            <h1 className="text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4"> Nossos Serviços </h1>
+
+            {/* subtitle w typewriter */}
+            <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
+              <Typewriter text="como podemos te ajudar ?" delay={200} delayEnd={1500} />
+            </div>
 
             {/* cards */}
-            <h2>
-              <Typewriter text="te amo mais <3" delay={200} delayEnd={1000} />
-            </h2>
-            <div className="flex flex-wrap items-center justify-center flex-row gap-10 w-full m-w-60">
-              <CardServices
-                title={content[0].title}
-                text={content[0].text}
-                icon={content[0].icon}
-              />
-              <CardServices
-                title={content[1].title}
-                text={content[1].text}
-                icon={content[1].icon}
-              />
-              <CardServices
-                title={content[2].title}
-                text={content[2].text}
-                icon={content[2].icon}
-              />
-              <CardServices
-                title={content[3].title}
-                text={content[3].text}
-                icon={content[3].icon}
-              />
+
+            <div className="flex flex-wrap items-center justify-center flex-row gap-10">
+
+              {/* ------ card 01 */}
+              <motion.div
+                initial={{ y: 100, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <CardServices
+                  title={content[0].title}
+                  text={content[0].text}
+                  icon={content[0].icon}
+                />
+              </motion.div>
+
+              {/* ------ card 02 */}
+              <motion.div
+                initial={{ y: 100, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <CardServices
+                  title={content[1].title}
+                  text={content[1].text}
+                  icon={content[1].icon}
+                />
+              </motion.div>
+
+              {/* ------ card 03 */}
+              <motion.div
+                initial={{ y: 100, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <CardServices
+                  title={content[2].title}
+                  text={content[2].text}
+                  icon={content[2].icon}
+                />
+              </motion.div>
+
+              {/* ------ card 04 */}
+              <motion.div
+                initial={{ y: 100, scale: 0.8, opacity: 0 }}
+                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <CardServices
+                  title={content[3].title}
+                  text={content[3].text}
+                  icon={content[3].icon}
+                />
+              </motion.div>
             </div>
+
           </div>
         </div>
-      </section>
+      </section >
     </>
   );
 }

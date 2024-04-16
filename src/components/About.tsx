@@ -30,13 +30,12 @@ export default function About() {
           {/* content */}
           <div className='flex flex-wrap flex-row items-start place-content-evenly text-justify gap-x-4 gap-y-10 pb-3.5'>
 
+            {/* ----  mission */}
             <motion.div
-              // style={{ scaleY: scrollYProgress }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.9 }}
             >
-              {/* mission */}
               <div className='flex flex-col items-center max-w-80 gap-6'>
                 <RocketLaunchIcon fontSize='large' />
                 <h1 className='font-bold tracking-[.24em]'>MISSÃO</h1>
@@ -44,13 +43,12 @@ export default function About() {
               </div>
             </motion.div>
 
+            {/* ---- values */}
             <motion.div
-              // style={{ scaleY: scrollYProgress }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.9 }}
             >
-              {/* values */}
               <div className='flex flex-col items-center max-w-80 gap-4'>
                 <VolunteerActivismIcon fontSize='large' />
                 <h1 className='font-bold tracking-[.24em]'>VALORES</h1>
@@ -58,13 +56,12 @@ export default function About() {
               </div>
             </motion.div>
 
+            {/* ----  vision */}
             <motion.div
-              // style={{ scaleY: scrollYProgress }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.9 }}
             >
-              {/* vision */}
               <div className='flex flex-col items-center max-w-80 gap-4'>
                 <VisibilityIcon fontSize='large' />
                 <h1 className='font-bold tracking-[.24em]'>VISÃO</h1>
@@ -73,7 +70,6 @@ export default function About() {
             </motion.div>
           </div>
           <MyStepper />
-
         </div >
 
         <section className={styles.sectionright} />

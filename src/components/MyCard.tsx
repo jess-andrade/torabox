@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
+import { motion } from "framer-motion"
 
 //MUI imports
 import Card from '@mui/material/Card';
@@ -51,8 +52,7 @@ export default function MyCard({ text, title }: CardProps) {
           </Typography>
         </div>
       </CardContent>
-
-
     </Card >
+
   );
 }
