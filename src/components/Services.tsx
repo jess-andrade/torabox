@@ -9,6 +9,7 @@ import HighlightAltIcon from '@mui/icons-material/HighlightAlt';
 
 //-- my imports 
 import CardServices from './CardServices'
+import styles from '../styles/section.module.css'
 
 //-- card content
 const content = [
@@ -41,13 +42,16 @@ export default function Services() {
       <section id="services">
 
         {/* main container */}
-        <div className="flex bg-[url('../../public/greybricks.png')] min-w-full min-h-screen">
+        <div className='min-h-[450px] bg-slate-100  text-[#181b17] max-w-full'>
+
+          {/* inclinated section */}
+          <section className={styles.sectionright} />
 
           {/* content */}
           <div className='flex min-w-full items-center flex-col justify-center'>
 
             {/* title */}
-            <h1 className='text-3xl font-bold justify-center text-slate-100 tracking-[.24em] pb-20'>NOSSOS SERVIÇOS</h1>
+            <h1 className='text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-20'>NOSSOS SERVIÇOS</h1>
 
             {/* cards */}
             <div className='flex flex-wrap items-center justify-center flex-row gap-10 w-full m-w-60'>
@@ -56,12 +60,10 @@ export default function Services() {
               <CardServices title={content[2].title} text={content[2].text} icon={content[2].icon} />
               <CardServices title={content[3].title} text={content[3].text} icon={content[3].icon} />
             </div>
-
-
           </div>
         </div>
-
       </section >
+
     </>
   )
 }

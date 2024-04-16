@@ -22,9 +22,9 @@
   transform-origin: top right;
 }
 
-.sectionleftorange {
+.sectionleftwhite {
   position: relative;
-  background-color: #fca04f;
+  background-color: #f1f5f9;
   overflow: hidden;
   width: 100%;
   height: 108px;

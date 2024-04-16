@@ -29,12 +29,12 @@ export default function MyCard({ text, title }: CardProps) {
   return (
 
     <Card sx={{
-      minHeight: 300,
-      minWidth: 600,
+      minHeight: 200,
+      minWidth: 500,
       backgroundColor: '#242424',
       maxWidth: '80%',
       color: '#f1f5f9',
-      padding: 5,
+      padding: 4,
 
     }}>
       <CardContent sx={{

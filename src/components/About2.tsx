@@ -13,8 +13,9 @@ export default function About2() {
     <>
 
       <section id="services">
+
         {/* main container */}
-        <div className="flex min-w-full min-h-screen items-center justify-center">
+        <div className="flex min-w-full min-h-[700px] items-center justify-center">
 
           {/* content */}
           <div className='flex wrap min-w-full flex-row'>
@@ -23,6 +24,9 @@ export default function About2() {
         </div>
 
       </section >
+
+
+
     </>
   )
 }

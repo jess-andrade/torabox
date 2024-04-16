@@ -22,7 +22,7 @@ interface CardProps {
 const bull = (
   <Box
     component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)', maxHeight: 100 }}
   >
     •
   </Box>
@@ -32,11 +32,10 @@ export default function CardServices({ text, title, icon }: CardProps) {
   return (
 
     <Card sx={{
-      minHeight: 200,
       minWidth: 600,
-      backgroundColor: '#242424',
+      backgroundColor: 'rgb(210, 210, 209, 0.3)',
       maxWidth: 1000,
-      color: '#f1f5f9',
+      color: '#242424',
       padding: 5,
 
     }}>

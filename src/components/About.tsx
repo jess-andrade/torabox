@@ -27,7 +27,6 @@ export default function About() {
           {/* inclinated section */}
           <section className={styles.sectionright} />
 
-
           {/* content */}
           <div className='flex flex-wrap flex-row items-start place-content-evenly text-justify gap-x-4 gap-y-10 pb-3.5'>
 
