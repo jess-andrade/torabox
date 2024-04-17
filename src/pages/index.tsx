@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <Layout>
       <Home />
-      <About />
-      <About2 />
+      {/* <About />
+      <About2 /> */}
       <Services />
       <Projects />
       <Us />

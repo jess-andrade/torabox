@@ -29,10 +29,16 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
           >
             <div className='flex flex-col'>
-              {/* title */}
-              <h1 className='text-4xl font-bold text-[#f1f5f9] tracking-[.24em] pb-4 justify-center'>PORTFÓLIO</h1>
+
+              <div className='flex flex-col justify-center items-center'>
+                {/* title */}
+                <h1 className='text-4xl font-bold text-[#f1f5f9] tracking-[.24em] pb-4 justify-center'>PORTFÓLIO</h1>
+                {/* divider */}
+                <div className='h-1 w-24 bg-[#fca04f] '></div>
+              </div>
+
               {/* subtitle */}
-              <h2 className='text-xl font-bold text-[#a6a29e] tracking-[.20em] justify-center'>Conheça nossos projetos</h2>
+              <h2 className='text-xl font-bold text-[#a6a29e] tracking-[.20em] justify-center pt-6'>Conheça nossos projetos</h2>
             </div>
           </motion.div>
 

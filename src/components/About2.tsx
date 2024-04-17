@@ -1,12 +1,10 @@
 import * as React from "react";
 import Image from 'next/image';
 
-// -- MUI imports
-import MyStepper from './MyStepper';
-import NewStepper from './NewStepper';
-
 //-- my imports 
 import styles from '../styles/section.module.css'
+import NewStepper from './NewStepper';
+
 
 export default function About2() {
   return (
@@ -18,7 +16,10 @@ export default function About2() {
         <div className="flex min-w-full min-h-[700px] items-center justify-center">
 
           {/* content */}
-          <div className='flex flex-row min-w-full'>
+          <div className='flex flex-col min-w-full items-center justify-center text-slate-50'>
+
+            {/* title */}
+            <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-14"> PROCESSO COMERCIAL </h1>
             <NewStepper />
           </div>
         </div>

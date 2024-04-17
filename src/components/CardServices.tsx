@@ -33,7 +33,7 @@ export default function CardServices({ text, title, icon }: CardProps) {
 
     <Card sx={{
       minWidth: 300,
-      backgroundColor: '#ffffff',
+      backgroundColor: '#1a1c17',
       maxWidth: 1000,
       color: '#242424',
       padding: 5,
@@ -51,7 +51,7 @@ export default function CardServices({ text, title, icon }: CardProps) {
             <Typography
               variant="h6"
               component="div"
-              color='#242424'
+              color='#ffffff'
               fontWeight='bold'
             >
               {title}

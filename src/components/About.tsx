@@ -22,7 +22,7 @@ export default function About() {
     <>
       <section id="about">
         {/* main container */}
-        <div className='min-h-[450px] bg-slate-100  text-[#181b17] max-w-full'>
+        <div className='min-h-[450px] bg-[#f1f5f9]  text-[#181b17] max-w-full'>
 
           {/* inclinated section */}
           <section className={styles.sectionright} />

@@ -16,21 +16,21 @@ import MyCard from "./MyCard";
 
 const steps = [
   {
-    text: "Quem somos?",
+    text: "",
     title: "Quem somos?",
     description:
       "Somos uma equipe de programadores motivados e dedicados, prontos para te ajudar a desenvolver soluções tecnológicas sob medida, que impulsionem o seu negócio e atendam às suas necessidades específicas.",
     value: 0,
   },
   {
-    text: "Por que a Torabox?",
+    text: "",
     title: "title 02",
     description:
       "02 Lorem ipsum dolor sit amet. Aut voluptas quisquam in consequatur iusto ad voluptas accusantium. Et voluptas modi ea facere nihil sit maiores nemo sed sint consectetur cum velit dolorum.Non cupiditate enim ut voluptatem nulla qui dignissimos nostrum et voluptatem perferendis. Ad laborum placeat et earum doloribus vel soluta voluptatem ab dolorem distinctio est maxime rerum? Quo soluta eaque ea omnis ipsam vel dicta sapiente qui dolor porro.Ab illo numquam eos rerum totam sit suscipit harum. Est tenetur quia est laborum reiciendis aut sequi sint qui iste ipsa id aliquid minima sit ipsum corporis. Quo impedit enim et ratione incidunt ut voluptatibus corrupti id delectus quia sit dolorem animi",
     value: 1,
   },
   {
-    text: "Processo comercial",
+    text: " ",
     title: "title 03",
     description:
       "03 Lorem ipsum dolor sit amet. Aut voluptas quisquam in consequatur iusto ad voluptas accusantium. Et voluptas modi ea facere nihil sit maiores nemo sed sint consectetur cum velit dolorum.Non cupiditate enim ut voluptatem nulla qui dignissimos nostrum et voluptatem perferendis. Ad laborum placeat et earum doloribus vel soluta voluptatem ab dolorem distinctio est maxime rerum? Quo soluta eaque ea omnis ipsam vel dicta sapiente qui dolor porro.Ab illo numquam eos rerum totam sit suscipit harum. Est tenetur quia est laborum reiciendis aut sequi sint qui iste ipsa id aliquid minima sit ipsum corporis. Quo impedit enim et ratione incidunt ut voluptatibus corrupti id delectus quia sit dolorem animi",
@@ -55,21 +55,21 @@ export default function NewStepper() {
   };
 
   return (
+
     <Box
       sx={{
-        width: "100%",
         display: "flex",
         flexDirection: "column",
-        maxWidth: "100%",
+        maxWidth: "80%",
         alignItems: "center",
         justifyContent: "center",
-        gap: 6,
+
       }}
     >
       <Stepper
         nonLinear
         activeStep={activeStep}
-        sx={{ display: "flex", flexWrap: "wrap", gap: 5 }}
+        sx={{ display: "flex", flexWrap: "wrap", flexDirection: 'row', gap: 1 }}
       >
         {steps.map((step, index) => (
           <Step key={step.text} completed={completed[index]}>
@@ -77,7 +77,7 @@ export default function NewStepper() {
               onClick={handleStep(index)}>
               {activeStep == step.value ? (
                 <Image
-                  className={`w-24 pl-${Math.floor(step.title.length / 2)}`}
+                  className={`w-28 pl-${Math.floor(step.title.length / 2)}`}
                   onClick={() => setBox((prevMode) => !prevMode)}
                   src={boxopened}
                   alt="box-opened"
@@ -85,15 +85,14 @@ export default function NewStepper() {
                 />
               ) : (
                 <Image
-                  className={`w-24 pl-${Math.floor(step.title.length / 2)}`}
-                  className="w-32"
+                  className={`w-28 pl-${Math.floor(step.title.length / 3)}`}
                   onClick={() => setBox((prevMode) => !prevMode)}
                   src={boxclosed}
                   alt="box-closed"
                   priority={false}
                 />
               )}
-              <span className="text-white">{step.text}</span>
+              <span className="text-[#a6a29e] font-bold tracking-[.10em] text-xl">{step.text}</span>
             </StepButton>
           </Step>
         ))}

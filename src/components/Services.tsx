@@ -7,6 +7,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import HighlightAltIcon from "@mui/icons-material/HighlightAlt";
+import BrushIcon from '@mui/icons-material/Brush';
 
 //-- my imports
 import CardServices from "./CardServices";
@@ -28,7 +29,7 @@ const content = [
   {
     title: "DESIGN",
     text: "03 lorem ipsum",
-    icon: <HighlightAltIcon color='primary' />,
+    icon: <BrushIcon color='primary' />,
   },
   {
     title: "Análise",
@@ -42,7 +43,7 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[450px] bg-[#f1f5f9] text-[#181b17] max-w-full pb-10">
+        <div className="min-h-[450px] bg-[#262923] text-[#181b17] max-w-full pb-10">
 
           {/* inclinated section */}
           <section className={styles.sectionright} />
@@ -51,11 +52,11 @@ export default function Services() {
           <div className="flex min-w-full items-center flex-col justify-center">
 
             {/* title */}
-            <h1 className="text-3xl font-bold justify-center text-[#242424] tracking-[.24em] pb-4"> NOSSOS SERVIÇOS </h1>
+            <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4"> NOSSOS SERVIÇOS </h1>
 
             {/* subtitle w typewriter */}
             <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
-              <Typewriter text="como podemos te ajudar ?" delay={200} delayEnd={3000} />
+              <Typewriter text="Como podemos te ajudar ?" delay={200} delayEnd={3200} />
             </div>
 
             {/* cards */}
@@ -115,7 +116,7 @@ export default function Services() {
               </motion.div> */}
             </div>
 
-            <button className='bg-[#F9B477] p-3 rounded text-[#242424] text-sm font-bold'>
+            <button className='bg-[#fca04f] p-3 rounded text-[#242424] text-sm font-bold'>
               FALE CONOSCO »
             </button>
 

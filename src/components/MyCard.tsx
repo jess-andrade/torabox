@@ -33,9 +33,9 @@ export default function MyCard({ text, title }: CardProps) {
       minHeight: 200,
       minWidth: 300,
       backgroundColor: 'transparent',
-      maxWidth: '70%',
+      maxWidth: '50%',
       color: '#f1f5f9',
-      padding: 4,
+      padding: 2,
       alignItems: 'center'
 
     }}>
