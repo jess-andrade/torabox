@@ -28,6 +28,7 @@ export default function IconLabelTabs() {
       alignItems: 'center',
       justifyContent: 'space-around',
       backgroundColor: '#181b17',
+
     }}>
 
 

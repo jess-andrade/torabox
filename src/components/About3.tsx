@@ -39,7 +39,8 @@ export default function About3() {
                 <div className='text-[#fca04f] text-sm'> Para seu negócio</div>
                 <div className='text-[#ebeae4] font-bold text-5xl tracking-[.10em] '> Precisando de uma modernização tecnológica em seu negócio ?</div>
                 <div className='h-1 w-24 bg-[#fca04f]'></div>
-                <div className=' pt-4 text-xl text-[#9a9793]'>Lorem ipsum dolor sit amet. Ea architecto tempora nam nostrum rerum aut voluptatem obcaecati aut similique sunt est dolores  Ea architecto tempora nam nostrum rerum aut voluptatem obcaecati aut similique </div>
+                <div className=' pt-4 text-2xl text-[#9a9793] font-bold'> Não fique para trás  </div>
+                <div className='text-xl text-[#9a9793]'>Se seu negócio esta precisando de um site, um sistema web ou até mesmo um aplicativo. Deixa que cuidamos disso</div>
               </div>
 
 

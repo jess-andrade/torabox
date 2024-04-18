@@ -18,17 +18,22 @@ import Typewriter from "./Typewriter";
 const content = [
   {
     title: "SITE",
-    text: "01 lorem ipsum",
+    text: "Criamos o site sob medida para atender às suas demandas, com um planejamento abrangente que engloba desde o design do layout até a implementação do sistema",
     icon: <LanguageIcon color='primary' />,
   },
   {
-    title: "MOBILE",
-    text: "02 lorem ipsum",
+    title: "SISTEMA WEB",
+    text: "Personalizamos sistemas conforme suas necessidades específicas para aprimorar a gestão dos dados armazenados em sua empresa, visando uma administração mais eficiente e eficaz.",
+    icon: <LanguageIcon color='primary' />,
+  },
+  {
+    title: "APLICATIVO",
+    text: "A Torabox irá materializar suas ideias por meio do desenvolvimento de um aplicativo, tornando suas ideias em soluções funcionais e acessíveis.",
     icon: <PhoneIphoneIcon color='primary' />,
   },
   {
     title: "DESIGN",
-    text: "03 lorem ipsum",
+    text: "Está pensando em ter um site, mas não sabe por onde começar? Tudo começa com o design de interfaces, onde realizamos estudos e protótipos personalizados para garantir que seu site cumpra com o objetivo",
     icon: <BrushIcon color='primary' />,
   },
   {
@@ -43,7 +48,7 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[450px] bg-[#181b17] text-[#181b17] max-w-full pb-10 pt-20">
+        <div className="min-h-[550px] bg-[#181b17] text-[#181b17] max-w-full pb-10 pt-20">
 
           {/* inclinated section */}
           {/* <section className={styles.sectionright} /> */}
@@ -51,17 +56,20 @@ export default function Services() {
           {/* content */}
           <div className="flex min-w-full items-center flex-col justify-center">
 
-            {/* title */}
-            <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4"> NOSSOS SERVIÇOS </h1>
 
-            {/* subtitle w typewriter */}
-            <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
-              <Typewriter text="Como podemos te ajudar ?" delay={200} delayEnd={3200} />
+            <div>
+              {/* title */}
+              <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4"> NOSSOS SERVIÇOS </h1>
+
+              {/* subtitle w typewriter */}
+              <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
+                <Typewriter text="Como podemos te ajudar ?" delay={200} delayEnd={3200} />
+              </div>
             </div>
 
             {/* cards */}
 
-            <div className="flex flex-wrap items-center justify-center flex-row gap-10 pb-10">
+            <div className="flex flex-wrap items-center justify-center flex-row gap-10 pb-10 z-10">
 
               {/* ------ card 01 */}
               <motion.div
@@ -76,7 +84,7 @@ export default function Services() {
                 />
               </motion.div>
 
-              {/* ------ card 02 */}
+              {/* ------ card 01 */}
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1.0, opacity: 1 }}
@@ -89,7 +97,7 @@ export default function Services() {
                 />
               </motion.div>
 
-              {/* ------ card 03 */}
+              {/* ------ card 02 */}
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1.0, opacity: 1 }}
@@ -99,6 +107,19 @@ export default function Services() {
                   title={content[2].title}
                   text={content[2].text}
                   icon={content[2].icon}
+                />
+              </motion.div>
+
+              {/* ------ card 03 */}
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1.0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <CardServices
+                  title={content[3].title}
+                  text={content[3].text}
+                  icon={content[3].icon}
                 />
               </motion.div>
 
@@ -117,7 +138,7 @@ export default function Services() {
             </div>
 
             <button className='bg-[#fca04f] p-3 rounded text-[#242424] text-sm font-bold'>
-              FALE CONOSCO »
+              FAÇA O ORÇAMENTO »
             </button>
 
           </div>

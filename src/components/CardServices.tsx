@@ -32,11 +32,15 @@ export default function CardServices({ text, title, icon }: CardProps) {
   return (
 
     <Card sx={{
-      minWidth: 300,
-      backgroundColor: '#1a1c17',
-      maxWidth: 1000,
+      minWidth: 200,
+      minHeight: 270,
+      backgroundColor: '#181b17',
+      maxWidth: 250,
       color: '#242424',
       padding: 5,
+      borderRadius: 10,
+      border: 2,
+      borderColor: '#fca04f'
     }}>
       <CardContent sx={{
         display: 'flex',
@@ -51,13 +55,16 @@ export default function CardServices({ text, title, icon }: CardProps) {
             <Typography
               variant="h6"
               component="div"
-              color='#ffffff'
+              color='#ebeae4'
               fontWeight='bold'
             >
               {title}
             </Typography>
           </div>
-          <Typography variant="body2">
+          <Typography
+            variant="body2"
+            sx={{ color: '#ebeae4', textAlign: 'justify', fontSize: 16 }}
+          >
             {text}
           </Typography>
         </div>
