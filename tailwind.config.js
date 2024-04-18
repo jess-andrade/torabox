@@ -10,6 +10,9 @@ module.exports = {
       backgroundImage: {
         'tijolos': "url('/public/tijolos.jpg')",
       },
+      fontFamily: {
+        sans: ['"Nunito"', 'sans-serif']
+      }
     },
   },
   plugins: [],

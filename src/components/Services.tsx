@@ -43,10 +43,10 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[450px] bg-[#262923] text-[#181b17] max-w-full pb-10">
+        <div className="min-h-[450px] bg-[#181b17] text-[#181b17] max-w-full pb-10 pt-20">
 
           {/* inclinated section */}
-          <section className={styles.sectionright} />
+          {/* <section className={styles.sectionright} /> */}
 
           {/* content */}
           <div className="flex min-w-full items-center flex-col justify-center">
@@ -65,8 +65,8 @@ export default function Services() {
 
               {/* ------ card 01 */}
               <motion.div
-                initial={{ y: 100, scale: 0.8, opacity: 0 }}
-                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
                 <CardServices
@@ -78,8 +78,8 @@ export default function Services() {
 
               {/* ------ card 02 */}
               <motion.div
-                initial={{ y: 100, scale: 0.8, opacity: 0 }}
-                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
                 <CardServices
@@ -91,8 +91,8 @@ export default function Services() {
 
               {/* ------ card 03 */}
               <motion.div
-                initial={{ y: 100, scale: 0.8, opacity: 0 }}
-                whileInView={{ y: 0, scale: 1.0, opacity: 1 }}
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
                 <CardServices

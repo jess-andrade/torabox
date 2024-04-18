@@ -44,7 +44,7 @@ export default function Home() {
 
 
         {/* main container */}
-        <div className="flex flex-col bg-[#ffff] min-w-full min-h-80 pt-10 justify-center ">
+        <div className="flex flex-col bg-[#ebeae4] min-w-full min-h-80 pt-10 justify-center ">
 
           <motion.div
             initial={{ opacity: 0 }}

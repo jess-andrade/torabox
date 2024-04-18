@@ -19,7 +19,7 @@ export default function Projects() {
       <section id="projects">
 
         {/* main container */}
-        <div className="flex flex-row flex-wrap bg-[#181b17] min-w-full min-h-[500px] text-[#181b17] items-center justify-center gap-x-24">
+        <div className="flex flex-row flex-wrap bg-[#262923] min-w-full min-h-[500px] text-[#181b17] items-center justify-center gap-x-24">
 
           {/*content */}
 
@@ -33,8 +33,10 @@ export default function Projects() {
               <div className='flex flex-col justify-center items-center'>
                 {/* title */}
                 <h1 className='text-4xl font-bold text-[#f1f5f9] tracking-[.24em] pb-4 justify-center'>PORTFÓLIO</h1>
+
                 {/* divider */}
                 <div className='h-1 w-24 bg-[#fca04f] '></div>
+
               </div>
 
               {/* subtitle */}

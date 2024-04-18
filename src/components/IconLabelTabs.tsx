@@ -41,13 +41,13 @@ export default function IconLabelTabs() {
           backgroundColor: "rgb(124 45 18)"
         }
       }}>
-        <Tab href='#home' label='início' style={{ color: value === 0 ? 'orange' : 'white', fontWeight: 'bold' }} />
+        <Tab href='#home' label='início' style={{ color: '#f1f5f9' }} />
         {/* icon={<HomeIcon  />}  */}
 
-        <Tab href='' label='Sobre nós' style={{ color: value === 0 ? 'orange' : 'white', fontWeight: 'bold' }} />
+        <Tab href='' label='Sobre nós' style={{ color: '#f1f5f9' }} />
         {/* icon={<PersonPinIcon />}  */}
 
-        <Tab href='' label='Contato' style={{ color: value === 0 ? 'orange' : 'white', fontWeight: 'bold' }} />
+        <Tab href='' label='Contato' style={{ color: '#f1f5f9' }} />
         {/* icon={<PersonPinIcon />}  */}
         {/* 
         <Tab icon={<BubbleChartIcon style={{ color: value === 4 ? 'orange' : 'white' }} />} href='#services' />
