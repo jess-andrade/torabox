@@ -29,8 +29,8 @@ export default function About3() {
                 whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className='flex w-[600px] h-[300px] z-0 bg-[#fca04f] rounded-r-full '>
-                  <div className='z-10 w-[400px] pl-28'><Image src={coding} alt='' /></div>
+                <div className='flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-r-full pb-10'>
+                  <div className='z-10 max-w-[400px] pl-28'><Image src={coding} alt='' /></div>
                 </div>
               </motion.div>
 
@@ -40,7 +40,7 @@ export default function About3() {
                 <div className='text-[#ebeae4] font-bold text-5xl tracking-[.10em] '> Precisando de uma modernização tecnológica em seu negócio ?</div>
                 <div className='h-1 w-24 bg-[#fca04f]'></div>
                 <div className=' pt-4 text-2xl text-[#9a9793] font-bold'> Não fique para trás  </div>
-                <div className='text-xl text-[#9a9793]'>Se seu negócio esta precisando de um site, um sistema web ou até mesmo um aplicativo. Deixa que cuidamos disso</div>
+                <div className='text-xl text-[#9a9793] pb-20'>Se seu negócio esta precisando de um site, um sistema web ou até mesmo um aplicativo. Deixa que cuidamos disso</div>
               </div>
 
 

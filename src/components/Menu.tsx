@@ -8,19 +8,12 @@ import MyStepper from './MyStepper';
 
 //-- my imports 
 import styles from '../styles/section.module.css'
-import NewStepper from './NewStepper';
-
-//-- famer motion
-import { motion, useScroll } from "framer-motion"
 
 
 export default function Menu() {
 
-  const { scrollYProgress } = useScroll();
-
   return (
     <>
-      <section id="about">
         {/* main container */}
         <div className='min-h-[450px] bg-[#f1f5f9]  text-[#181b17] max-w-full'>
 

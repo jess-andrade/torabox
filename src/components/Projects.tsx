@@ -32,7 +32,7 @@ export default function Projects() {
 
               <div className='flex flex-col justify-center items-center'>
                 {/* title */}
-                <h1 className='text-4xl font-bold text-[#f1f5f9] tracking-[.24em] pb-4 justify-center'>PORTFÓLIO</h1>
+                <h1 className='text-4xl font-bold text-[#f1f5f9] tracking-[.24em] pb-4 justify-center pt-14'>PORTFÓLIO</h1>
 
                 {/* divider */}
                 <div className='h-1 w-24 bg-[#fca04f] '></div>

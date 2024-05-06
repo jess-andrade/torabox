@@ -33,7 +33,7 @@ export default function About4() {
                 <div className='text-[#ebeae4] font-bold text-5xl tracking-[.10em] '> Tem uma ideia inovadora para tirar da caixinha ?</div>
                 <div className='h-1 w-24 bg-[#fca04f]'></div>
                 <div className=' pt-4 text-2xl text-[#9a9793] font-bold'> Não deixe suas ideias só no papel </div>
-                <div className='text-xl text-[#9a9793]'>Nossa equipe está pronta para criar uma solução tecnológica inovadora com você. Quem sabe você não é o novo Bill Gates?</div>
+                <div className='text-xl text-[#9a9793] pb-10'>Nossa equipe está pronta para criar uma solução tecnológica inovadora com você. Quem sabe você não é o novo Bill Gates?</div>
               </div>
 
               <motion.div
@@ -41,7 +41,7 @@ export default function About4() {
                 whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className='flex w-[600px] h-[300px] z-0 bg-[#fca04f] rounded-l-full '>
+                <div className='flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-l-full '>
                   <div className='z-10 w-[400px] pr-24'><Image src={teamwork} alt='' /></div>
                 </div>
               </motion.div>
