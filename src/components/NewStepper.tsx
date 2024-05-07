@@ -63,7 +63,6 @@ export default function NewStepper() {
         maxWidth: "80%",
         alignItems: "center",
         justifyContent: "center",
-
       }}
     >
       <Stepper

@@ -17,18 +17,30 @@ type PropType = {
   options?: EmblaOptionsType
 }
 
-// -- Images
-import cat from '../../public/cat.jpg'
-import otter from '../../public/otter.png'
-import bolsa from '../../public/bolsa.png'
-import festa from '../../public/festa.jpg'
+// ---------------------------- Images
+import kuromi from '../../public/projects/Fancy.png'
+import dreamland from '../../public/projects/dreamland.png'
 
-const images = {
-  1: <Image src={cat} alt='cat' width={400} height={300} />,
-  2: <Image src={bolsa} alt='bolsa' width={400} height={300} />,
-  3: <Image src={otter} alt='otter' width={400} height={300} />,
-  4: <Image src={festa} alt='otter' width={400} height={300} />
-}
+
+//-------------------------- card content
+const content = [
+  {
+    img: <Image src={kuromi} alt='kuromi' />,
+    title: "Kuromi's Minesweeper",
+    text: "kuromi kuromi texto",
+  },
+  {
+    img: <Image src={kuromi} alt='kuromi' />,
+    title: "Histórias para dormir",
+    text: "historias p dormir texto",
+
+  },
+  {
+    img: <Image src={kuromi} alt='kuromi' />,
+    title: "sei lá 3",
+    text: "--- sei la 3",
+  },
+];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
@@ -52,8 +64,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <div className="embla__slide" key={index}>
               {/* <div className="embla__slide__number">{index + 1} </div> */}
 
-              {/* --- image */}
-              <PaperProjects img={images[index + 1]} />
+              {/* --- content */}
+              <PaperProjects img={content[index + 1].img} title={content[index + 1].title} text={content[index + 1].text} />
 
             </div>
           ))}
@@ -68,15 +80,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
-            <DotButton
+
+            < DotButton
               color='primary'
               key={index}
               onClick={() => onDotButtonClick(index)}
               className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
+                index === selectedIndex ? ' embla__dot--selected ' : ''
               )}
             />
+
           ))}
+
         </div>
       </div>
     </section>
