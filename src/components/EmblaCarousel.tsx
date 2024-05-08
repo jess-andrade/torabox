@@ -1,72 +1,75 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
-import { EmblaOptionsType } from 'embla-carousel'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { EmblaOptionsType } from "embla-carousel";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
   PrevButton,
   NextButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
-import useEmblaCarousel from 'embla-carousel-react'
-import { Paper } from '@mui/material'
-import PaperProjects from './PaperProjects'
+  usePrevNextButtons,
+} from "./EmblaCarouselArrowButtons";
+import useEmblaCarousel from "embla-carousel-react";
+import { Paper } from "@mui/material";
+import PaperProjects from "./PaperProjects";
 
 type PropType = {
-  slides: number[]
-  options?: EmblaOptionsType
-}
+  slides: number[];
+  options?: EmblaOptionsType;
+};
 
 // ---------------------------- Images
-import kuromi from '../../public/projects/Fancy.png'
-import dreamland from '../../public/projects/dreamland.png'
-
+import kuromi from "../../public/projects/Fancy.png";
+import dreamland from "../../public/projects/dreamland.png";
 
 //-------------------------- card content
 const content = [
   {
-    img: <Image src={kuromi} alt='kuromi' />,
+    img: <Image src={kuromi} alt="kuromi" />,
     title: "Kuromi's Minesweeper",
     text: "kuromi kuromi texto",
   },
   {
-    img: <Image src={kuromi} alt='kuromi' />,
+    img: <Image src={kuromi} alt="kuromi" />,
     title: "Histórias para dormir",
     text: "historias p dormir texto",
-
   },
   {
-    img: <Image src={kuromi} alt='kuromi' />,
+    img: <Image src={kuromi} alt="kuromi" />,
     title: "sei lá 3",
     text: "--- sei la 3",
   },
 ];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const { slides, options } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi)
+    useDotButton(emblaApi);
+
+  console.log(content.length);
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {content.map((cont, index) => (
             <div className="embla__slide" key={index}>
               {/* <div className="embla__slide__number">{index + 1} </div> */}
 
               {/* --- content */}
-              <PaperProjects img={content[index + 1].img} title={content[index + 1].title} text={content[index + 1].text} />
-
+              <PaperProjects
+                img={cont.img}
+                title={cont.title}
+                text={cont.text}
+              />
             </div>
           ))}
         </div>
@@ -80,22 +83,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
-
-            < DotButton
-              color='primary'
+            <DotButton
+              color="primary"
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected ' : ''
+              className={"embla__dot".concat(
+                index === selectedIndex ? " embla__dot--selected " : ""
               )}
             />
-
           ))}
-
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default EmblaCarousel
+export default EmblaCarousel;
