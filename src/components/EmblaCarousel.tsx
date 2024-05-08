@@ -29,7 +29,7 @@ const content = [
     text: "kuromi kuromi texto",
   },
   {
-    img: <Image src={kuromi} alt="kuromi" />,
+    img: <Image src={dreamland} alt="dreamland" />,
     title: "Histórias para dormir",
     text: "historias p dormir texto",
   },

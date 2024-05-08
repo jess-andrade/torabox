@@ -40,7 +40,7 @@ export default function Projects() {
               </div>
 
               {/* subtitle */}
-              <h2 className='text-xl font-bold text-[#a6a29e] tracking-[.20em] justify-center pt-6'>Conheça nossos projetos</h2>
+              <h2 className='flex flex-wrap max-w-42 text-xl font-bold text-[#a6a29e] tracking-[.20em] justify-center pt-6'>Conheça alguns dos nossos projetos</h2>
             </div>
           </motion.div>
 
@@ -52,7 +52,7 @@ export default function Projects() {
           <div className='flex flex-wrap gap-4 pt-24'>
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
-        </div>
+        </div >
 
       </section >
     </>
