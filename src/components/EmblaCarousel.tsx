@@ -27,13 +27,19 @@ const content = [
     img: <Image src={kuromi} alt="kuromi" />,
     title: "Kuromi's Minesweeper",
     text: "Campo minado com o tema Sanrio",
-    sub: 'Mobile',
+    sub: 'MOBILE APP',
   },
   {
     img: <Image src={dreamland} alt="dreamland" />,
     title: "Histórias para dormir",
     text: "Aplicativo com uma coletania de histórias e músicas relaxantes para ajudar crianças a dormirem",
-    sub: 'Mobile',
+    sub: 'MOBILE APP',
+  },
+  {
+    img: <Image src={dreamland} alt="dreamland" />,
+    title: "Histórias para dormir",
+    text: "Aplicativo com uma coletania de histórias e músicas relaxantes para ajudar crianças a dormirem",
+    sub: 'MOBILE APP',
   },
 
 ];

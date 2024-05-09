@@ -24,11 +24,12 @@ export default function PaperProjects({ img, text, title, sub }: CardProps) {
           m: 1,
           minHeight: 320,
           padding: 3,
+          borderRadius: 4,
 
         },
       }}
     >
-      <Paper elevation={3}  >
+      <Paper elevation={4}  >
         <div className='flex items-center'>
 
           {/* --------- content */}

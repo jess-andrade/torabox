@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Image from 'next/image';
+import { motion } from "framer-motion";
 
 interface ImageProps {
   img: any,
@@ -18,7 +19,7 @@ export default function UsCard({ img, name, subtitle, description }: ImageProps)
         flexWrap: 'wrap',
         '& > :not(style)': {
           m: 1,
-          maxWidth: 400,
+          minWidth: 190,
           padding: 2,
           borderRadius: 7,
           backgroundColor: '#ffffff',
@@ -27,16 +28,22 @@ export default function UsCard({ img, name, subtitle, description }: ImageProps)
       }}
     >
       <Paper elevation={2} >
-        <div className='flex flex-row flex-wrap gap-4 items-center justify-center '>
+        <div className='flex flex-row flex-wrap gap-x-4 items-center '>
 
           {/* <Paper elevation={9} sx={{ backgroundColor: '#fca04f' }}> */}
 
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1.1 }}
+            drag="x"
+            dragConstraints={{ left: -100, right: 100 }}
+          >
+            <div className='w-24'>
+              {img}
+            </div>
+          </motion.div>
 
-          <div className='w-32 bg-[]'>
-            {img}
-          </div>
-
-          <div className='flex flex-col min-w-52'>
+          <div className='flex flex-col'>
             <h1 className='text-xl font-bold pb-2'>{name}</h1>
             <h1 className='text-sm font-bold pb-2 text-[#F9B477]'>{subtitle}</h1>
           </div>

@@ -22,7 +22,7 @@ export default function Projects() {
         <div className="flex flex-row flex-wrap bg-[#262923] min-w-full min-h-[500px] text-[#181b17] items-center justify-center ">
 
           {/*------ content */}
-          <div className="flex flex-wrap flex-row items-center gap-x-32">
+          <div className="flex flex-wrap flex-row items-center gap-x-32 pt-16 pb-20">
 
             {/*------ text */}
             <motion.div
@@ -31,7 +31,7 @@ export default function Projects() {
               transition={{ duration: 0.8 }}
             >
               <div className='flex flex-col'>
-                <div className='flex flex-col justify-center'>
+                <div className='flex flex-col justify-center '>
                   {/* title */}
                   <h1 className='text-4xl font-bold text-[#f1f5f9] tracking-[.24em] pb-4 justify-center pt-14'>PORTFÓLIO</h1>
                   {/* divider */}

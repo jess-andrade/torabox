@@ -18,21 +18,21 @@ const us = [
     name: "João",
     subtitle: "FULL-STACK",
     description:
-      "orem ipsum dolor sit amet. Id culpa error sit expedita quaerat sit praesentium ratione aut quae voluptatem in quasi accusamus eos culpa placeat sed quia nihil. In nemo enim aut molestias facilis ad praesentium amet ad quae laborum.",
+      "",
   },
   {
     img: <Image src={jess} alt='bolsa' width={300} height={300} style={{ borderRadius: 300 }} />,
     name: "Jessica",
     subtitle: "FRONT-END",
     description:
-      "orem ipsum dolor sit amet. Id culpa error sit expedita quaerat sit praesentium ratione aut quae voluptatem in quasi accusamus eos culpa placeat sed quia nihil. In nemo enim aut molestias facilis ad praesentium amet ad quae laborum.",
+      "",
   },
   {
     img: <Image src={gisa} alt='otter' width={300} height={300} style={{ borderRadius: 300 }} />,
     name: "Gisa",
     subtitle: "UI/UX",
     description:
-      "orem ipsum dolor sit amet. Id culpa error sit expedita quaerat sit praesentium ratione aut quae voluptatem in quasi accusamus eos culpa placeat sed quia nihil. In nemo enim aut molestias facilis ad praesentium amet ad quae laborum.",
+      "",
   },
 ]
 
@@ -52,7 +52,15 @@ export default function Home() {
             transition={{ duration: 0.9 }}
           >
             {/* content */}
-            <div className='flex flex-wrap min-w-full flex-row items-center justify-center'>
+            <div className='flex flex-wrap flex-row items-center justify-center gap-8'>
+
+              <div>
+                {/* title */}
+                <h1 className='text-4xl font-bold text-[#262923] tracking-[.24em] pb-4 justify-center pt-14'>TECH TEAM</h1>
+                {/* divider */}
+                <div className='h-1 w-24 bg-[#fca04f] '></div>
+              </div>
+
 
               <UsCard img={us[0].img} name={us[0].name} subtitle={us[0].subtitle} description={us[0].description} />
 
