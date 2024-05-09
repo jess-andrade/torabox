@@ -16,7 +16,7 @@ export default function About4() {
         <div className="flex flex-wrap bg-[#262923] min-w-full min-h-screen ">
 
           {/* content */}
-          <div className="flex flex-wrap flex-row min-w-full items-center pt-20 justify-end  gap-x-80">
+          <div className="flex flex-wrap flex-row min-w-full items-center pt-20 justify-end gap-x-40 ">
 
             {/* title, subtitle and text */}
             <div className="flex flex-wrap flex-row justify-center">

@@ -20,6 +20,7 @@ type PropType = {
 // ---------------------------- Images
 import kuromi from "../../public/projects/kuromi.png";
 import dreamland from "../../public/projects/dreamland.png";
+import money from "../../public/projects/money.png";
 
 //-------------------------- card content
 const content = [
@@ -36,9 +37,9 @@ const content = [
     sub: 'MOBILE APP',
   },
   {
-    img: <Image src={dreamland} alt="dreamland" />,
-    title: "Histórias para dormir",
-    text: "Aplicativo com uma coletania de histórias e músicas relaxantes para ajudar crianças a dormirem",
+    img: <Image src={money} alt="money" />,
+    title: "Finanças",
+    text: "Aplicativo para controlar finanças, com dicas de economias ",
     sub: 'MOBILE APP',
   },
 
