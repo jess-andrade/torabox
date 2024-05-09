@@ -41,17 +41,19 @@ export default function About4() {
 
             </div>
             {/* ----- side image */}
-            <motion.div
-              initial={{ x: 100, scale: 0.8, opacity: 0 }}
-              whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-l-full">
-                <div className="z-10 max-w-[400px] pr-24">
+
+            <div className="flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-l-full">
+              <div className="z-10 max-w-[400px] pr-24">
+                <motion.div
+                  initial={{ x: 100, scale: 0.8, opacity: 0 }}
+                  whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
                   <Image src={teamwork} alt="" />
-                </div>
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
+
           </div>
         </div>
       </section>

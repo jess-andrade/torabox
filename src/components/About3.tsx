@@ -20,17 +20,19 @@ export default function About3() {
             <div className="flex flex-wrap flex-row justify-start gap-x-40 gap-y-10">
 
               {/* ----- side image */}
-              <motion.div
-                initial={{ x: -100, scale: 0.8, opacity: 0 }}
-                whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-r-full pb-10">
-                  <div className="z-10 max-w-[400px] pl-28">
+
+              <div className="flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-r-full pb-10">
+                <div className="z-10 max-w-[400px] pl-28">
+                  <motion.div
+                    initial={{ x: -100, scale: 0.8, opacity: 0 }}
+                    whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                  >
                     <Image src={coding} alt="" />
-                  </div>
+                  </motion.div>
                 </div>
-              </motion.div>
+              </div>
+
 
               {/* ----- text */}
               <div className="flex flex-col flex-wrap max-w-[800px] gap-4">
@@ -50,9 +52,6 @@ export default function About3() {
                 </div>
               </div>
 
-              {/* <div className='text-white text-justify max-w-xl pt-14  '>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsum, deserunt corrupti vitae fuga assumenda non dolores id sit illo temporibus. Voluptate voluptatibus saepe eaque fugit eius consequatur cupiditate aliquid.</p>
-                  </div> */}
             </div>
           </div>
         </div>
