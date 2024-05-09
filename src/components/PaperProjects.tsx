@@ -10,10 +10,11 @@ interface CardProps {
   img: any,
   text: String,
   title: String,
+  sub: String,
 }
 
 
-export default function PaperProjects({ img, text, title }: CardProps) {
+export default function PaperProjects({ img, text, title, sub }: CardProps) {
   return (
     <Box
       sx={{
@@ -21,23 +22,32 @@ export default function PaperProjects({ img, text, title }: CardProps) {
         flexWrap: 'wrap',
         '& > :not(style)': {
           m: 1,
-          minWidth: 600,
-          maxHeight: 500,
+          minHeight: 320,
           padding: 3,
 
         },
       }}
     >
       <Paper elevation={3}  >
-        <div className='flex flex-row gap-10 items-center'>
-          <div className='flex max-w-80 max-h-40'>
-            {img}
+        <div className='flex items-center'>
+
+          {/* --------- content */}
+          <div className='flex flex-col gap-4'>
+
+            {/* --------- text */}
+            <div className='flex flex-col min-w-full text-justify gap-3'>
+              <div className='text-[#fca04f] text-sm font-bold'>{sub}</div>
+              <h1 className='text-xl font-bold pb-2 text-[#262923]'>{title}</h1>
+              <p className='text-sm text-[#9a9793] '>{text}</p>
+            </div>
+
+            {/* --------- img */}
+            <div className='flex max-w-[400px]'>
+              {img}
+            </div>
+
           </div>
-          <div className='flex flex-col max-w-42 text-justify'>
-            <div className='text-[#fca04f] text-sm font-bold'>Subtitle</div>
-            <h1 className='text-xl font-bold pb-2 text-[#262923]'>{title}</h1>
-            <p className='text-sm text-[#262923] '>{text}</p>
-          </div>
+
         </div>
       </Paper>
     </Box>

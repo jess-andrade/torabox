@@ -18,7 +18,7 @@ type PropType = {
 };
 
 // ---------------------------- Images
-import kuromi from "../../public/projects/Fancy.png";
+import kuromi from "../../public/projects/kuromi.png";
 import dreamland from "../../public/projects/dreamland.png";
 
 //-------------------------- card content
@@ -26,18 +26,16 @@ const content = [
   {
     img: <Image src={kuromi} alt="kuromi" />,
     title: "Kuromi's Minesweeper",
-    text: "kuromi kuromi texto",
+    text: "Campo minado com o tema Sanrio",
+    sub: 'Mobile',
   },
   {
     img: <Image src={dreamland} alt="dreamland" />,
     title: "Histórias para dormir",
-    text: "historias p dormir texto",
+    text: "Aplicativo com uma coletania de histórias e músicas relaxantes para ajudar crianças a dormirem",
+    sub: 'Mobile',
   },
-  {
-    img: <Image src={kuromi} alt="kuromi" />,
-    title: "sei lá 3",
-    text: "--- sei la 3",
-  },
+
 ];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
@@ -69,6 +67,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 img={cont.img}
                 title={cont.title}
                 text={cont.text}
+                sub={cont.sub}
               />
             </div>
           ))}
@@ -80,6 +79,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
+        {/* 
 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
@@ -92,7 +92,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               )}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

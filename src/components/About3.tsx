@@ -14,10 +14,11 @@ export default function About3() {
         {/* main container */}
         <div className="flex flex-wrap bg-[#181b17] min-w-full min-h-screen">
           {/* content */}
-          <div className="flex flex-wrap min-w-full flex-row items-center ">
-            {/* title, subtitle and text */}
+          <div className="flex flex-wrap min-w-full flex-row items-center pt-20">
 
-            <div className="flex flex-wrap flex-row justify-start gap-x-40">
+            {/* title, subtitle and text */}
+            <div className="flex flex-wrap flex-row justify-start gap-x-40 gap-y-10">
+
               {/* ----- side image */}
               <motion.div
                 initial={{ x: -100, scale: 0.8, opacity: 0 }}
