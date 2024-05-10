@@ -38,13 +38,13 @@ export default function UsCard({ img, name, subtitle, description }: ImageProps)
             drag="x"
             dragConstraints={{ left: -100, right: 100 }}
           >
-            <div className='w-24'>
+            <div className='w-20'>
               {img}
             </div>
           </motion.div>
 
           <div className='flex flex-col'>
-            <h1 className='text-xl font-bold pb-2'>{name}</h1>
+            <h1 className='text-sm font-bold pb-2'>{name}</h1>
             <h1 className='text-sm font-bold pb-2 text-[#F9B477]'>{subtitle}</h1>
           </div>
           <p className='text-sm '>{description}</p>
