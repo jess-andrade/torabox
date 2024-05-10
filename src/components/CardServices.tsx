@@ -33,39 +33,40 @@ export default function CardServices({ text, title, icon }: CardProps) {
   return (
 
     <Card sx={{
-      backgroundColor: '#262923',
+      backgroundColor: '#f4f4f4',
       borderRadius: 4,
+      boxShadow: 3,
 
     }}>
       <CardContent sx={{
         display: 'flex',
         flexDirection: 'row',
-        maxWidth: 250,
-        minWidth: 200,
+        maxWidth: 310,
         minHeight: 270,
         gap: 4,
         boxShadow: 20,
-        backgroundColor: '#181A17',
+        backgroundColor: '#f4f4f4',
         borderRadius: 4,
         padding: 5,
       }}>
 
 
         <div className='flex flex-col gap-4'>
-          <div className='flex flex-row gap-4'>
+          <div className='flex flex-col gap-4'>
             {icon}
             <Typography
-              variant="h6"
+              variant="h5"
               component="div"
-              color='#ebeae4'
+              color='primary'
               fontWeight='bold'
             >
               {title}
             </Typography>
+
           </div>
           <Typography
             variant="body2"
-            sx={{ color: '#9a9793', textAlign: 'justify', fontSize: 16 }}
+            sx={{ color: '#5C5E5A', textAlign: 'justify', fontSize: 16 }}
           >
             {text}
           </Typography>
