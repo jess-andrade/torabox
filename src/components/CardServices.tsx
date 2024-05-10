@@ -41,13 +41,14 @@ export default function CardServices({ text, title, icon }: CardProps) {
       <CardContent sx={{
         display: 'flex',
         flexDirection: 'row',
-        maxWidth: 310,
-        minHeight: 270,
+        maxWidth: 220,
+        height: 290,
         gap: 4,
         boxShadow: 20,
         backgroundColor: '#f4f4f4',
         borderRadius: 4,
         padding: 5,
+        fontFamily: "League Spartan",
       }}>
 
 

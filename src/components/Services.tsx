@@ -50,7 +50,7 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[550px] bg-[url('../../public/code3.png')] text-[#181b17] max-w-full pb-10 pt-20">
+        <div className="min-h-[550px] bg-[#181b17] text-[#181b17] max-w-full pb-10 pt-20">
           {/* inclinated section */}
           {/* <section className={styles.sectionright} /> */}
 
