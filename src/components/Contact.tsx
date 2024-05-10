@@ -2,7 +2,7 @@ import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import woman from '../../public/womandark.png'
+import woman from "../../public/womandark.png";
 
 export default function Contact() {
   return (
@@ -10,23 +10,22 @@ export default function Contact() {
       <section id="contact">
         {/* main container */}
         <div className="flex flex-wrap bg-[#262923] min-w-full min-h-screen justify-center">
-
           {/* content */}
           <div className="flex flex-wrap flex-row items-center min-w-full pt-20 justify-around gap-y-8 ">
-
             {/* --------------img */}
-            <div className='w-[420px]'>
-              <Image src={woman} alt='contact' className='rounded-lg' />
+            <div className="w-[420px]">
+              <Image src={woman} alt="contact" className="rounded-lg" />
             </div>
             {/* --------------form */}
 
-            <div className='flex flex-wrap min-w-[55%]'>
+            <div className="flex flex-wrap min-w-[55%]">
               <form className="container">
-
-                <div className='flex flex-col justify-center items-center gap-6'>
-                  <h1 className='text-[#fca04f] tracking-[.20em] text-2xl'>SOLICITAR ORÇAMENTO</h1>
+                <div className="flex flex-col justify-center items-center gap-6">
+                  <h1 className="text-[#fca04f] tracking-[.20em] text-2xl">
+                    SOLICITAR ORÇAMENTO
+                  </h1>
                   {/* divider */}
-                  <div className='h-1 w-24 bg-[#fca04f] '></div>
+                  <div className="h-1 w-24 bg-[#fca04f] "></div>
                 </div>
 
                 <div className="email block">
@@ -60,18 +59,20 @@ export default function Contact() {
                       required
                     />
                   </div>
-
                 </div>
                 <div className="message block">
                   <label htmlFor="frm-message">Mensagem *</label>
-                  <textarea id="frm-message" rows="6" name="message"></textarea>
+                  <textarea
+                    id="frm-message"
+                    style={{ height: 160 }}
+                    name="message"
+                  ></textarea>
                 </div>
-                <div className="button block">
+                <div className="button block mt-8">
                   <button type="submit">Enviar</button>
                 </div>
               </form>
             </div>
-
           </div>
         </div>
       </section>
