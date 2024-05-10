@@ -25,6 +25,7 @@ export default function PaperProjects({ img, text, title, sub }: CardProps) {
           minHeight: 320,
           padding: 3,
           borderRadius: 4,
+          backgroundColor: '#f4f4f4',
 
         },
       }}
