@@ -10,8 +10,7 @@ export default async function handler(req: any, res: any) {
     const { name, email, phone, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
+      service: "gmail",
       auth: {
         user: process.env.NODEMAILER_EMAIL_USER,
         pass: process.env.NODEMAILER_EMAIL_PASS,
