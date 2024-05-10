@@ -63,7 +63,7 @@ export default function Contact() {
 
                 </div>
                 <div className="message block">
-                  <label htmlFor="frm-message">Message *</label>
+                  <label htmlFor="frm-message">Mensagem *</label>
                   <textarea id="frm-message" rows="6" name="message"></textarea>
                 </div>
                 <div className="button block">

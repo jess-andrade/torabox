@@ -36,12 +36,10 @@ const us = [
   },
 ]
 
-export default function Home() {
+export default function Us() {
   return (
     <>
-
       <section id="us">
-
 
         {/* main container */}
         <div className="flex flex-col bg-[#ebeae4] min-w-full min-h-80 pt-10 justify-center ">
