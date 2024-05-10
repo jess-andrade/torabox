@@ -1,13 +1,14 @@
 import * as React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 //--MUI imports
 import LanguageIcon from "@mui/icons-material/Language";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import HighlightAltIcon from "@mui/icons-material/HighlightAlt";
-import BrushIcon from '@mui/icons-material/Brush';
+import BrushIcon from "@mui/icons-material/Brush";
 
 //-- my imports
 import CardServices from "./CardServices";
@@ -19,22 +20,22 @@ const content = [
   {
     title: "SITE",
     text: "Criamos o site sob medida para atender às suas demandas, com um planejamento abrangente que engloba desde o design do layout até a implementação do sistema",
-    icon: <LanguageIcon color='primary' />,
+    icon: <LanguageIcon color="primary" />,
   },
   {
     title: "SISTEMA WEB",
     text: "Personalizamos sistemas conforme suas necessidades específicas para aprimorar a gestão dos dados armazenados em sua empresa, visando uma administração mais eficiente e eficaz.",
-    icon: <LanguageIcon color='primary' />,
+    icon: <LanguageIcon color="primary" />,
   },
   {
     title: "APLICATIVO",
     text: "A Torabox irá materializar suas ideias por meio do desenvolvimento de um aplicativo, tornando suas ideias em soluções funcionais e acessíveis.",
-    icon: <PhoneIphoneIcon color='primary' />,
+    icon: <PhoneIphoneIcon color="primary" />,
   },
   {
     title: "DESIGN",
     text: "Está pensando em ter um site, mas não sabe por onde começar? Tudo começa com o design de interfaces, onde realizamos estudos e protótipos personalizados para garantir que seu site cumpra com o objetivo",
-    icon: <BrushIcon color='primary' />,
+    icon: <BrushIcon color="primary" />,
   },
   {
     title: "Análise",
@@ -49,28 +50,31 @@ export default function Services() {
       <section id="services">
         {/* main container */}
         <div className="min-h-[550px] bg-[#181b17] text-[#181b17] max-w-full pb-10 pt-20">
-
           {/* inclinated section */}
           {/* <section className={styles.sectionright} /> */}
 
           {/* content */}
           <div className="flex min-w-full items-center flex-col justify-center">
-
-
             <div>
               {/* title */}
-              <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4"> NOSSOS SERVIÇOS </h1>
+              <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4">
+                {" "}
+                NOSSOS SERVIÇOS{" "}
+              </h1>
 
               {/* subtitle w typewriter */}
-              <div className='text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9'>
-                <Typewriter text="Como podemos te ajudar ?" delay={200} delayEnd={3200} />
+              <div className="text-xl justify-center text-[#a6a29e] tracking-[.20em] pb-10 min-h-9">
+                <Typewriter
+                  text="Como podemos te ajudar ?"
+                  delay={200}
+                  delayEnd={3200}
+                />
               </div>
             </div>
 
             {/* cards */}
 
             <div className="flex flex-wrap items-center justify-center flex-row gap-10 pb-10 z-10">
-
               {/* ------ card 01 */}
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -137,13 +141,14 @@ export default function Services() {
               </motion.div> */}
             </div>
 
-            <button className='bg-[#fca04f] p-3 rounded text-[#242424] text-sm font-bold'>
-              FAÇA O ORÇAMENTO »
-            </button>
-
+            <Link href={`#contact`}>
+              <button className="bg-[#fca04f] p-3 rounded text-[#242424] text-sm font-bold">
+                FAÇA O ORÇAMENTO »
+              </button>
+            </Link>
           </div>
         </div>
-      </section >
+      </section>
     </>
   );
 }

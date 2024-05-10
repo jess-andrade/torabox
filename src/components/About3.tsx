@@ -10,15 +10,13 @@ import coding from "../../public/coding.png";
 export default function About3() {
   return (
     <>
-      <section id="home">
+      <section id="about">
         {/* main container */}
         <div className="flex flex-wrap bg-[#181b17] min-w-full min-h-screen">
           {/* content */}
           <div className="flex flex-wrap min-w-full flex-row items-center pt-20">
-
             {/* title, subtitle and text */}
             <div className="flex flex-wrap flex-row justify-start gap-x-40 gap-y-10">
-
               {/* ----- side image */}
 
               <div className="flex max-w-[600px] max-h-[300px] z-0 bg-[#fca04f] rounded-r-full pb-10">
@@ -32,7 +30,6 @@ export default function About3() {
                   </motion.div>
                 </div>
               </div>
-
 
               {/* ----- text */}
               <div className="flex flex-col flex-wrap max-w-[800px] gap-4">
@@ -51,7 +48,6 @@ export default function About3() {
                   até mesmo um aplicativo. Deixa que cuidamos disso
                 </div>
               </div>
-
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 //-- my imports
 import toraboxlogo from "../../public/torabox-logo.png";
 import DownButton from "./DownButton";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,11 +13,9 @@ export default function Home() {
       <section id="home">
         {/* main container */}
         <div className="flex flex-wrap flex-row bg-[url('../../public/wpp2.png')] min-w-full min-h-screen">
-
           {/* content */}
           <div className="flex min-w-full flex-rox items-center justify-around ">
             <div className="flex gap-x-44 items-center p-5 ">
-
               {/* title, subtitle and text */}
               <div className="flex min-w-full flex-wrap flex-col gap-y-28">
                 <motion.div
@@ -37,16 +36,14 @@ export default function Home() {
                   </div>
                 </motion.div>
 
-                <DownButton />
-
+                <Link href={`#about`}>
+                  <DownButton />
+                </Link>
               </div>
             </div>
 
-
-            <div className='flex min-w-[400px] bg-orange-500'></div>
+            <div className="flex min-w-[400px] bg-orange-500"></div>
           </div>
-
-
         </div>
       </section>
     </>
