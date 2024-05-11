@@ -18,9 +18,9 @@ type PropType = {
 };
 
 // ---------------------------- Images
-import kuromi from "../../public/projects/kuromi.png";
-import dreamland from "../../public/projects/dreamland.png";
-import money from "../../public/projects/money.png";
+import kuromi from "../../public/projects/1.png";
+import dreamland from "../../public/projects/2.png";
+import money from "../../public/projects/3.png";
 
 //-------------------------- card content
 const content = [

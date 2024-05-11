@@ -9,10 +9,10 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function DownButton() {
   return (
-    <Box sx={{ '& > :not(style)': { m: 1 } }}>
+    <Box sx={{ '& > :not(style)': { m: 1, backgroundColor: '#fca04f' } }} >
 
-      <Fab variant="extended" sx={{ color: '#f1f5f9' }}>
-        <KeyboardArrowDownIcon sx={{ mr: 1, color: 'white' }} />
+      <Fab variant="extended" sx={{}}>
+        <KeyboardArrowDownIcon sx={{ mr: 1 }} />
         Saiba mais
       </Fab>
 

@@ -22,7 +22,7 @@ export default function HomePage() {
       <About2 /> */}
       <Services />
       <Projects />
-      <Us />
+      {/* <Us /> */}
       <Contact />
       <Footer />
     </Layout>

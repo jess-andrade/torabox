@@ -6,7 +6,7 @@ const theme = createTheme({
       main: 'rgb(251 146 60)', //orange 
     },
     secondary: {
-      main: 'rgb(124 45 18);',
+      main: 'rgb(158,102,39)',
     },
   },
 });

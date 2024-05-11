@@ -19,7 +19,7 @@ export default function Projects() {
       <section id="projects">
 
         {/* main container */}
-        <div className="flex flex-row flex-wrap bg-[#262923] min-w-full min-h-[500px] text-[#181b17] items-center justify-center ">
+        <div className="flex flex-row flex-wrap bg-[#000000] min-w-full min-h-[500px] text-[#181b17] items-center justify-center ">
 
           {/*------ content */}
           <div className="flex flex-wrap flex-row items-center gap-x-32 pt-16 pb-20">
