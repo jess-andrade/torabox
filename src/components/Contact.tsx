@@ -18,6 +18,9 @@ export default function Contact() {
       if (!response.ok) {
         throw new Error(`Invalid response: ${response.status}`);
       }
+
+      e.target.reset();
+
       alert("Thanks for contacting us, we will get back to you soon!");
     } catch (err) {
       console.error(err);
