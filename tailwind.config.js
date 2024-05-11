@@ -1,9 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
-const withMT = require("@material-tailwind/react/utils/withMT");
- 
-
-module.exports = withMT({
+module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,7 +8,7 @@ module.exports = withMT({
   theme: {
     extend: {
       backgroundImage: {
-        'tijolos': "url('/public/tijolos.jpg')",
+        'code': "url('/public/tijolos.jpg')",
       },
       fontFamily: {
         sans: ['"Nunito"', 'sans-serif']
@@ -20,4 +16,4 @@ module.exports = withMT({
     },
   },
   plugins: [],
-})
+}
