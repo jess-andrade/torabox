@@ -29,7 +29,7 @@ export default function Home() {
                   </div>
                   <div className="text-[#f1f5f9] text-xl pt-4">
                     {" "}
-                    Soluções inteligêntes e tecnológicas para você e seu
+                    Soluções inteligentes e tecnológicas para você e seu
                     negócio.
                   </div>
                 </div>
