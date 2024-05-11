@@ -36,14 +36,14 @@ export default function Contact() {
           {/* content */}
           <div className="flex flex-wrap flex-row items-center min-w-full pt-20 justify-around gap-y-8 ">
             {/* --------------img */}
-            <div className="w-[420px]">
+            <div className="w-[420px] hidden lg:block">
               <Image src={woman} alt="contact" className="rounded-lg" />
             </div>
             {/* --------------form */}
 
             <div className="flex flex-wrap min-w-[55%]">
               <form className="container" onSubmit={handleSubmit}>
-                <div className="flex flex-col justify-center items-center gap-6">
+                <div className="flex flex-col justify-center items-center gap-6 ">
                   <h1 className="text-[#fca04f] tracking-[.20em] text-2xl">
                     SOLICITAR ORÇAMENTO
                   </h1>

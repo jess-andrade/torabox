@@ -12,11 +12,9 @@ export default function Home() {
     <>
       <section id="home">
         {/* main container */}
-        <div className="flex flex-wrap flex-row bg-[url('../../public/wpp2.png')] min-w-full min-h-screen p-10">
-
+        <div className="flex flex-wrap flex-row bg-[url('../../public/wpp2.png')] w-full min-h-screen">
           {/* content */}
           <div className="flex min-w-full flex-row items-center justify-around ">
-
             {/* title, subtitle and text */}
             <div className="flex flex-wrap min-w-[50%] flex-col justify-center gap-y-20">
               <motion.div
@@ -37,18 +35,14 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <Link href={`#about`} className=' flex self-end'>
+              <Link href={`#about`} className=" flex self-end">
                 <DownButton />
               </Link>
             </div>
             <div className="flex min-w-[400px] bg-orange-500"></div>
           </div>
-
-
-
         </div>
-
-      </section >
+      </section>
     </>
   );
 }
