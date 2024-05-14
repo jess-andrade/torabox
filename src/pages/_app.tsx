@@ -3,14 +3,15 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import { createTheme } from "@mui/material";
-
 import { scroll } from "framer-motion/dom";
 
 import "../styles/embla.css";
 import "../styles/base.css";
 
 import Layout from "../components/Layout";
+
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../utils/theme";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -21,9 +22,11 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
         />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }

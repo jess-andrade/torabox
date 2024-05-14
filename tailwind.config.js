@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'tijolos': "url('/public/tijolos.jpg')",
+        'code': "url('/public/tijolos.jpg')",
       },
       fontFamily: {
         sans: ['"Nunito"', 'sans-serif']

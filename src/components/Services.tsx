@@ -9,7 +9,7 @@ import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import HighlightAltIcon from "@mui/icons-material/HighlightAlt";
 import BrushIcon from "@mui/icons-material/Brush";
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 
 //-- my imports
 import CardServices from "./CardServices";
@@ -21,22 +21,22 @@ const content = [
   {
     title: "SITE",
     text: "Criamos o site sob medida para atender às suas demandas, com um planejamento abrangente que engloba desde o design do layout até a implementação do sistema",
-    icon: <LanguageIcon color="primary" fontSize='large' />,
+    icon: <LanguageIcon color="primary" fontSize="large" />,
   },
   {
     title: "SISTEMA WEB",
     text: "Personalizamos sistemas conforme suas necessidades específicas para aprimorar a gestão dos dados armazenados em sua empresa, visando uma administração mais eficiente e eficaz.",
-    icon: <LaptopMacIcon color="primary" fontSize='large' />,
+    icon: <LaptopMacIcon color="primary" fontSize="large" />,
   },
   {
     title: "APLICATIVO",
     text: "A Torabox irá materializar suas ideias por meio do desenvolvimento de um aplicativo, tornando suas ideias em soluções funcionais e acessíveis.",
-    icon: <PhoneIphoneIcon color="primary" fontSize='large' />,
+    icon: <PhoneIphoneIcon color="primary" fontSize="large" />,
   },
   {
     title: "DESIGN",
     text: "Está pensando em ter um site, mas não sabe por onde começar? Tudo começa com o design de interfaces, onde realizamos estudos e protótipos personalizados para garantir que seu site cumpra com o objetivo",
-    icon: <BrushIcon color="primary" fontSize='large' />,
+    icon: <BrushIcon color="primary" fontSize="large" />,
   },
   {
     title: "Análise",
@@ -50,7 +50,7 @@ export default function Services() {
     <>
       <section id="services">
         {/* main container */}
-        <div className="min-h-[550px] bg-[#181b17] text-[#181b17] max-w-full pb-10 pt-20">
+        <div className="min-h-[550px] bg-[#181b17] text-[#181b17] max-w-260 lg:max-w-full pb-10 pt-20">
           {/* inclinated section */}
           {/* <section className={styles.sectionright} /> */}
 
@@ -64,7 +64,7 @@ export default function Services() {
               </h1>
 
               {/* divider */}
-              <div className='h-1 w-24 bg-[#fca04f] '></div>
+              <div className="h-1 w-24 bg-[#fca04f] "></div>
 
               {/* subtitle w typewriter */}
               <div className="text-xl justify-center text-[#f4f4f4] tracking-[.20em] pb-10 min-h-9 pt-6">
