@@ -14,10 +14,8 @@ export default function About4() {
       <section id="home">
         {/* main container */}
         <div className="flex flex-wrap bg-[#262923] min-w-full min-h-screen ">
-
           {/* content */}
           <div className="flex flex-wrap flex-row min-w-full items-center pt-20 justify-end gap-x-40 ">
-
             {/* title, subtitle and text */}
             <div className="flex flex-wrap flex-row justify-center">
               <div className="flex flex-col flex-wrap max-w-[800px] gap-4 ">
@@ -36,9 +34,6 @@ export default function About4() {
                   inovadora com você. Quem sabe você não é o novo Bill Gates?
                 </div>
               </div>
-
-
-
             </div>
             {/* ----- side image */}
 
@@ -53,7 +48,6 @@ export default function About4() {
                 </motion.div>
               </div>
             </div>
-
           </div>
         </div>
       </section>

@@ -12,10 +12,26 @@ import Layout from "../components/Layout";
 
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../utils/theme";
+import { NextIntlClientProvider } from "next-intl";
+import { useRouter } from "next/router";
+
+export async function getStaticProps(context: any) {
+  return {
+    props: {
+      messages: (await import(`../../messages/${context.locale}.json`)).default,
+    },
+  };
+}
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
-    <>
+    <NextIntlClientProvider
+      locale={router.locale}
+      timeZone="Europe/Vienna"
+      messages={pageProps.messages}
+    >
       <Head>
         <meta
           name="viewport"
@@ -27,6 +43,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
-    </>
+    </NextIntlClientProvider>
   );
 }

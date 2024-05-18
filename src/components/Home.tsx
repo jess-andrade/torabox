@@ -7,8 +7,11 @@ import toraboxlogo from "../../public/torabox-logo.png";
 import codeBg from "../../public/wpp2.png";
 import DownButton from "./DownButton";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Index");
+
   return (
     <>
       <section id="home">
@@ -30,8 +33,7 @@ export default function Home() {
                   </div>
                   <div className="text-[#f1f5f9] text-xl pt-4">
                     {" "}
-                    Soluções inteligentes e tecnológicas para você e seu
-                    negócio.
+                    {t("description")}
                   </div>
                 </div>
               </motion.div>
