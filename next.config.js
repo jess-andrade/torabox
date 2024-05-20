@@ -4,6 +4,7 @@ const nextConfig = {
   i18n: {
     locales: ['pt-BR', 'en-US', 'it'],
     defaultLocale: 'en-US',
+    localeDetection: true
   },
 }
 
