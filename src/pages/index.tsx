@@ -12,6 +12,7 @@ import About3 from "@/components/About3";
 import About4 from "@/components/About4";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
@@ -23,17 +24,22 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
 export default function HomePage() {
   return (
-    <Layout>
-      <Home />
-      <About3 />
-      <About4 />
-      {/* <About />
+    <>
+      <Head>
+        <title>Torabox.</title>
+      </Head>
+      <Layout>
+        <Home />
+        <About3 />
+        <About4 />
+        {/* <About />
       <About2 /> */}
-      <Services />
-      <Projects />
-      {/* <Us /> */}
-      <Contact />
-      <Footer />
-    </Layout>
+        <Services />
+        <Projects />
+        {/* <Us /> */}
+        <Contact />
+        <Footer />
+      </Layout>
+    </>
   );
 }
