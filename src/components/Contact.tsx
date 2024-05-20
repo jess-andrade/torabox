@@ -23,9 +23,9 @@ import { useTranslations } from "next-intl";
 export default function Contact() {
   const t = useTranslations("Contact");
 
-  const [openModal, setOpenModal] = React.useState(true);
-  const [clientName, setClientName] = React.useState("John");
-  const [sendEmailStatus, setSendEmailStatus] = React.useState("success");
+  const [openModal, setOpenModal] = React.useState(false);
+  const [clientName, setClientName] = React.useState("");
+  const [sendEmailStatus, setSendEmailStatus] = React.useState("fail");
   const [emailLoading, setEmailLoading] = React.useState(false);
 
   const modalProps = {
