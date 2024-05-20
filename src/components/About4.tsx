@@ -11,7 +11,7 @@ import teamwork from "../../public/teamwork.png";
 import { useTranslations } from "next-intl";
 
 export default function About4() {
-  const t = useTranslations("About")
+  const t = useTranslations("About");
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function About4() {
             {/* title, subtitle and text */}
             <div className="flex flex-wrap flex-row justify-center">
               <div className="flex flex-col flex-wrap max-w-[800px] gap-4 p-10 md:p-0">
-                <div className="text-[#fca04f] text-[20px] md:text-sm">
+                <div className="text-[#fca04f] text-[20px] md:text-md">
                   {t("forYouHeader")}
                 </div>
                 <div className="text-[#ebeae4] font-bold text-4xl md:text-5xl tracking-[.10em] ">

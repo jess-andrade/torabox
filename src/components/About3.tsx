@@ -20,7 +20,6 @@ export default function About3() {
           <div className="flex flex-wrap min-w-screen flex-row items-center pt-20">
             {/* title, subtitle and text */}
             <div className="flex flex-wrap flex-row justify-start gap-x-40 gap-y-10">
-
               {/* ----- side image */}
               <div className="flex max-w-[400px] max-h-[160px] md:max-w-[600px] md:max-h-[300px] z-0 bg-[#fca04f] rounded-r-full pb-10">
                 <div className="z-10 max-w-[220px] md:max-w-[400px] pl-28">
@@ -34,11 +33,10 @@ export default function About3() {
                 </div>
               </div>
 
-
               {/* ------------------------------------- text */}
 
               <div className="flex flex-col flex-wrap max-w-[800px] gap-4 p-10 md:p-0">
-                <div className="text-[#fca04f] text-[20px] md:text-sm">
+                <div className="text-[#fca04f] text-[20px] md:text-md">
                   {t("businessHeader")}
                 </div>
                 <div className="text-[#ebeae4] font-bold text-4xl md:text-5xl tracking-[.10em] ">
