@@ -16,36 +16,40 @@ import CardServices from "./CardServices";
 import styles from "../styles/section.module.css";
 import Typewriter from "./Typewriter";
 
-//-- card content
-const content = [
-  {
-    title: "SITE",
-    text: "Criamos o site sob medida para atender às suas demandas, com um planejamento abrangente que engloba desde o design do layout até a implementação do sistema",
-    icon: <LanguageIcon color="primary" fontSize="large" />,
-  },
-  {
-    title: "SISTEMA WEB",
-    text: "Personalizamos sistemas conforme suas necessidades específicas para aprimorar a gestão dos dados armazenados em sua empresa, visando uma administração mais eficiente e eficaz.",
-    icon: <LaptopMacIcon color="primary" fontSize="large" />,
-  },
-  {
-    title: "APLICATIVO",
-    text: "A Torabox irá materializar suas ideias por meio do desenvolvimento de um aplicativo, tornando suas ideias em soluções funcionais e acessíveis.",
-    icon: <PhoneIphoneIcon color="primary" fontSize="large" />,
-  },
-  {
-    title: "DESIGN",
-    text: "Está pensando em ter um site, mas não sabe por onde começar? Tudo começa com o design de interfaces, onde realizamos estudos e protótipos personalizados para garantir que seu site cumpra com o objetivo",
-    icon: <BrushIcon color="primary" fontSize="large" />,
-  },
-  {
-    title: "Análise",
-    text: "04 lorem ipsum",
-    icon: <QueryStatsIcon />,
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("Services");
+
+  //-- card content
+  const content = [
+    {
+      title: t("websiteTitle"),
+      text: t("websiteDescription"),
+      icon: <LanguageIcon color="primary" fontSize="large" />,
+    },
+    {
+      title: t("webAppTitle"),
+      text: t("webAppDescription"),
+      icon: <LaptopMacIcon color="primary" fontSize="large" />,
+    },
+    {
+      title: t("mobileAppTitle"),
+      text: t("mobileAppDescription"),
+      icon: <PhoneIphoneIcon color="primary" fontSize="large" />,
+    },
+    {
+      title: t("designTitle"),
+      text: t("designDescription"),
+      icon: <BrushIcon color="primary" fontSize="large" />,
+    },
+    {
+      title: "Análise",
+      text: "04 lorem ipsum",
+      icon: <QueryStatsIcon />,
+    },
+  ];
+
   return (
     <>
       <section id="services">
@@ -60,7 +64,7 @@ export default function Services() {
               {/* title */}
               <h1 className="text-3xl font-bold justify-center text-[#f1f5f9] tracking-[.24em] pb-4">
                 {" "}
-                NOSSOS SERVIÇOS{" "}
+                {t("title")}{" "}
               </h1>
 
               {/* divider */}
@@ -68,11 +72,7 @@ export default function Services() {
 
               {/* subtitle w typewriter */}
               <div className="text-xl justify-center text-[#f4f4f4] tracking-[.20em] pb-10 min-h-9 pt-6">
-                <Typewriter
-                  text="Como podemos te ajudar ?"
-                  delay={200}
-                  delayEnd={3200}
-                />
+                <Typewriter text={t("subtitle")} delay={200} delayEnd={3200} />
               </div>
             </div>
 
@@ -147,7 +147,7 @@ export default function Services() {
 
             <Link href={`#contact`}>
               <button className="bg-[#9e6627] p-3 rounded-[20px] text-[#f4f4f4] text-sm font-bold pl-10 pr-10">
-                Faça o orçamento
+                {t("budgetButton")}
               </button>
             </Link>
           </div>

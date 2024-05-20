@@ -8,7 +8,11 @@ import coding from "../../public/coding.png";
 import create from "../../public/create.png";
 import teamwork from "../../public/teamwork.png";
 
+import { useTranslations } from "next-intl";
+
 export default function About4() {
+  const t = useTranslations("About");
+
   return (
     <>
       <section id="home">
@@ -19,19 +23,20 @@ export default function About4() {
             {/* title, subtitle and text */}
             <div className="flex flex-wrap flex-row justify-center">
               <div className="flex flex-col flex-wrap max-w-[800px] gap-4 ">
-                <div className="text-[#fca04f] text-sm">Para você</div>
+                <div className="text-[#fca04f] text-sm">
+                  {t("forYouHeader")}
+                </div>
                 <div className="text-[#ebeae4] font-bold text-5xl tracking-[.10em] ">
                   {" "}
-                  Tem uma ideia inovadora para tirar da caixinha ?
+                  {t("forYouTitle")}
                 </div>
                 <div className="h-1 w-24 bg-[#fca04f]"></div>
                 <div className=" pt-4 text-2xl text-[#9a9793] font-bold">
                   {" "}
-                  Não deixe suas ideias só no papel{" "}
+                  {t("forYouSubtitle")}{" "}
                 </div>
                 <div className="text-xl text-[#9a9793] pb-10">
-                  Nossa equipe está pronta para criar uma solução tecnológica
-                  inovadora com você. Quem sabe você não é o novo Bill Gates?
+                  {t("forYouDescription")}
                 </div>
               </div>
             </div>

@@ -10,8 +10,11 @@ import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { AppBar } from "@mui/material";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function IconLabelTabs() {
+  const t = useTranslations("Menu");
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -45,13 +48,17 @@ export default function IconLabelTabs() {
           },
         }}
       >
-        <Tab href="#home" label="início" style={{ color: "#f1f5f9" }} />
+        <Tab href="#home" label={t("home")} style={{ color: "#f1f5f9" }} />
         {/* icon={<HomeIcon  />}  */}
 
-        <Tab href="#about" label="Sobre nós" style={{ color: "#f1f5f9" }} />
+        <Tab href="#about" label={t("about")} style={{ color: "#f1f5f9" }} />
         {/* icon={<PersonPinIcon />}  */}
 
-        <Tab href="#contact" label="Contato" style={{ color: "#f1f5f9" }} />
+        <Tab
+          href="#contact"
+          label={t("contact")}
+          style={{ color: "#f1f5f9" }}
+        />
 
         {/* icon={<PersonPinIcon />}  */}
         {/* 

@@ -22,29 +22,33 @@ import kuromi from "../../public/projects/1.png";
 import dreamland from "../../public/projects/2.png";
 import money from "../../public/projects/3.png";
 
-//-------------------------- card content
-const content = [
-  {
-    img: <Image src={kuromi} alt="kuromi" />,
-    title: "Kuromi's Minesweeper",
-    text: "Campo minado com o tema Sanrio",
-    sub: "MOBILE APP",
-  },
-  {
-    img: <Image src={dreamland} alt="dreamland" />,
-    title: "Histórias para dormir",
-    text: "Aplicativo com uma coletania de histórias e músicas relaxantes para ajudar crianças a dormirem",
-    sub: "MOBILE APP",
-  },
-  {
-    img: <Image src={money} alt="money" />,
-    title: "Finanças",
-    text: "Aplicativo para controlar finanças, com dicas de economias ",
-    sub: "MOBILE APP",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
+  const t = useTranslations("Portfolio");
+
+  //-------------------------- card content
+  const content = [
+    {
+      img: <Image src={kuromi} alt="kuromi" />,
+      title: t("firstProjectTitle"),
+      text: t("firstProjectDescription"),
+      sub: t("firstProjectCategory"),
+    },
+    {
+      img: <Image src={dreamland} alt="dreamland" />,
+      title: t("secondProjectTitle"),
+      text: t("secondProjectDescription"),
+      sub: t("secondProjectCategory"),
+    },
+    {
+      img: <Image src={money} alt="money" />,
+      title: t("thirdProjectTitle"),
+      text: t("thirdProjectDescription"),
+      sub: t("thirdProjectCategory"),
+    },
+  ];
+
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 

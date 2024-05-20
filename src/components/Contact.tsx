@@ -15,7 +15,11 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
+import { useTranslations } from "next-intl";
+
 export default function Contact() {
+  const t = useTranslations("Contact");
+
   const [openModal, setOpenModal] = React.useState(false);
   const [modalTitle, setModalTitle] = React.useState("");
   const [modalText, setModalText] = React.useState("");
@@ -31,21 +35,22 @@ export default function Contact() {
         body: new URLSearchParams(data),
       });
       if (!response.ok) {
-        throw new Error(`Invalid response: ${response.status}`);
+        setOpenModal(true);
+        setModalTitle(t("modalFailTitle"));
+        setModalText(t("modalFailText"));
       }
 
       setOpenModal(true);
-      setModalTitle(`Seu e-mail foi enviado com sucesso!`);
+      setModalTitle(t("modalSuccessTitle"));
       setModalText(
-        `${e.target.name.value.split(" ")[0]
-        }, entraremos em contato assim que possível!`
+        t("modalSuccessText", { name: e.target.name.value.split(" ")[0] })
       );
 
       // e.target.reset();
     } catch (err) {
       setOpenModal(true);
-      setModalTitle(`Ops! Não foi possível enviar seu e-mail`);
-      setModalText(`Mas não se preocupe. Tente novamente mais tarde!`);
+      setModalTitle(t("modalFailTitle"));
+      setModalText(t("modalFailText"));
     }
   }
 
@@ -65,14 +70,14 @@ export default function Contact() {
             <form className="container" onSubmit={handleSubmit}>
               <div className="flex flex-col justify-center items-center gap-6 ">
                 <h1 className="text-[#fca04f] tracking-[.20em] text-2xl">
-                  SOLICITAR ORÇAMENTO
+                  {t("title")}
                 </h1>
                 {/* divider */}
                 <div className="h-1 w-24 bg-[#fca04f] "></div>
               </div>
 
               <div className="email block">
-                <label htmlFor="frm-email">E-mail *</label>
+                <label htmlFor="frm-email">{t("email")} *</label>
                 <input
                   id="frm-email"
                   type="email"
@@ -82,7 +87,7 @@ export default function Contact() {
                 />
               </div>
               <div className="block phone">
-                <label htmlFor="frm-phone">Telefone</label>
+                <label htmlFor="frm-phone">{t("phone")}</label>
                 <input
                   id="frm-phone"
                   type="text"
@@ -93,7 +98,7 @@ export default function Contact() {
               </div>
               <div className="name block">
                 <div>
-                  <label htmlFor="frm-name">Nome Completo *</label>
+                  <label htmlFor="frm-name">{t("name")} *</label>
                   <input
                     id="frm-name"
                     type="text"
@@ -104,7 +109,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="message block">
-                <label htmlFor="frm-message">Mensagem *</label>
+                <label htmlFor="frm-message">{t("message")} *</label>
                 <textarea
                   id="frm-message"
                   style={{ height: 160 }}
@@ -112,7 +117,7 @@ export default function Contact() {
                 ></textarea>
               </div>
               <div className="button block mt-8">
-                <button type="submit">Enviar</button>
+                <button type="submit">{t("submitButton")}</button>
               </div>
             </form>
           </div>
@@ -121,8 +126,7 @@ export default function Contact() {
 
       {/* --------------------------MODAL */}
 
-      <div className='flex min-w-full justify-center items-center bg-blue-500 '>
-
+      <div className="flex min-w-full justify-center items-center bg-blue-500 ">
         <Dialog open={openModal} handler={handleOpen}>
           <DialogHeader>
             <Typography variant="h5" color="blue-gray">
@@ -130,7 +134,7 @@ export default function Contact() {
             </Typography>
           </DialogHeader>
 
-          <div className='flex min-w-full justify-center items-center bg-pink-500'>
+          <div className="flex min-w-full justify-center items-center bg-pink-500">
             <DialogBody divider className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,20 +152,18 @@ export default function Contact() {
                 {modalText}
               </Typography>
               <Typography className="text-center font-normal">
-                Atenciosamente, equipe Torabox!
+                {t("modalEndingPhrase")}
               </Typography>
             </DialogBody>
           </div>
 
           <DialogFooter className="space-x-2">
             <Button variant="text" color="blue-gray" onClick={handleOpen}>
-              close
+              X
             </Button>
           </DialogFooter>
         </Dialog>
-
       </div>
-
-    </section >
+    </section>
   );
 }

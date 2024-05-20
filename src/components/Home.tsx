@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const t = useTranslations("Index");
+  const t = useTranslations("Home");
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function Home() {
               </motion.div>
 
               <Link href={`#about`} className=" flex self-end">
-                <DownButton />
+                <DownButton text={t("learnMoreButton")} />
               </Link>
             </div>
             <div className="flex min-w-[400px] bg-orange-500"></div>

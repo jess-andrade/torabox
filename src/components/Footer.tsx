@@ -10,7 +10,11 @@ import UsCard from "./UsCard";
 import EmailIcon from "@mui/icons-material/Email";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <>
       <section id="footer">
@@ -26,7 +30,7 @@ export default function Footer() {
 
             {/* ------------ info */}
             <div className="flex flex-col gap-4 text-[#ebeae4]">
-              <p>Copyright © 2024 TORABOX - Todos os direitos reservados.</p>
+              <p>Copyright © 2024 TORABOX - {t("copyright")}.</p>
 
               <div className="flex flex-row justify-around">
                 <p>

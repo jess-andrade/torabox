@@ -1,12 +1,63 @@
 {
-  "Index": {
-    "title": "Home",
-    "description": "Smart solutions for you and your business."
+  "Menu": {
+    "home": "Início",
+    "about": "Sobre nós",
+    "contact": "Contato"
   },
-  "LocaleSwitcher": {
-    "switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
+  "Home": {
+    "description": "Soluções inteligentes e tecnológicas para você e seu negócio. ",
+    "learnMoreButton": "Saiba mais"
   },
-  "PageLayout": {
-    "pageTitle": "next-intl"
+  "About": {
+    "businessHeader": "Para seu negócio",
+    "businessTitle": "Precisando de uma modernização tecnológica em seu negócio ?",
+    "businessSubtitle": "Não fique para trás",
+    "businessDescription": "Se seu negócio esta precisando de um site, um sistema web ou até mesmo um aplicativo. Deixa que cuidamos disso",
+    "forYouHeader": "Para você",
+    "forYouTitle": "Tem uma ideia inovadora para tirar da caixinha ?",
+    "forYouSubtitle": "Não deixe suas ideias só no papel",
+    "forYouDescription": "Nossa equipe está pronta para criar uma solução tecnológica inovadora com você. Quem sabe você não é o novo Bill Gates?"
+  },
+  "Services": {
+    "title": "NOSSOS SERVIÇOS",
+    "subtitle": "Como podemos te ajudar ?",
+    "websiteTitle": "SITE",
+    "websiteDescription": "Criamos o site sob medida para atender às suas demandas, com um planejamento abrangente que engloba desde o design do layout até a implementação do sistema",
+    "webAppTitle": "SISTEMA WEB",
+    "webAppDescription": "Personalizamos sistemas conforme suas necessidades específicas para aprimorar a gestão dos dados armazenados em sua empresa, visando uma administração mais eficiente e eficaz.",
+    "mobileAppTitle": "APLICATIVO",
+    "mobileAppDescription": "A Torabox irá materializar suas ideias por meio do desenvolvimento de um aplicativo, tornando suas ideias em soluções funcionais e acessíveis.",
+    "designTitle": "DESIGN",
+    "designDescription": "Está pensando em ter um site, mas não sabe por onde começar? Tudo começa com o design de interfaces, onde realizamos estudos e protótipos personalizados para garantir que seu site cumpra com o objetivo",
+    "budgetButton": "Faça o orçamento"
+  },
+  "Portfolio": {
+    "title": "PORTFÓLIO",
+    "subtitle": "Conheça alguns dos nossos projetos",
+    "firstProjectCategory": "MOBILE APP",
+    "firstProjectTitle": "Kuromi's Minesweeper",
+    "firstProjectDescription": "Campo minado com o tema Sanrio",
+    "secondProjectCategory": "MOBILE APP",
+    "secondProjectTitle": "Histórias para dormir",
+    "secondProjectDescription": "Aplicativo com uma coletânea de histórias e músicas relaxantes para ajudar crianças a dormirem",
+    "thirdProjectCategory": "MOBILE APP",
+    "thirdProjectTitle": "Finanças",
+    "thirdProjectDescription": "Aplicativo para controlar finanças, com dicas de economias"
+  },
+  "Contact": {
+    "title": "SOLICITAR ORÇAMENTO",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "name": "Nome Completo",
+    "message": "Mensagem",
+    "modalSuccessTitle": "Seu e-mail foi enviado com sucesso!",
+    "modalSuccessText": "{name}, entraremos em contato assim que possível!`",
+    "modalFailTitle": "Ops! Não foi possível enviar seu e-mail",
+    "modalFailText": "Mas não se preocupe. Tente novamente mais tarde!",
+    "modalEndingPhrase": "Atenciosamente, equipe Torabox!",
+    "submitButton": "Enviar"
+  },
+  "Footer": {
+    "copyright": "Todos os direitos reservados"
   }
 }
