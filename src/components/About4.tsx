@@ -11,7 +11,7 @@ import teamwork from "../../public/teamwork.png";
 import { useTranslations } from "next-intl";
 
 export default function About4() {
-  const t = useTranslations("About");
+  const t = useTranslations("About")
 
   return (
     <>
