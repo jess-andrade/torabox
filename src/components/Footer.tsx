@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 //-- my imports
 import styles from "../styles/section.module.css";
 import UsCard from "./UsCard";
+import logo from '../../public/logo.png'
 
 // -- MUI
 import EmailIcon from "@mui/icons-material/Email";
@@ -23,9 +24,9 @@ export default function Footer() {
           {/* content */}
           <div className="flex flex-wrap flex-row items-center justify-around">
             {/* ------------ title */}
-            <div className="flex flex-row text-[#f1f5f9] font-bold text-5xl tracking-[.24em]">
-              {" "}
-              TORABOX <p className="text-[#fca04f]"> . </p>
+
+            <div className="flex flex-row w-[200px]">
+              <Image src={logo} alt="logo" />
             </div>
 
             {/* ------------ info */}
