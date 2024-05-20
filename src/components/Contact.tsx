@@ -26,6 +26,7 @@ export default function Contact() {
   const [openModal, setOpenModal] = React.useState(true);
   const [clientName, setClientName] = React.useState("John");
   const [sendEmailStatus, setSendEmailStatus] = React.useState("success");
+  const [emailLoading, setEmailLoading] = React.useState(false);
 
   const modalProps = {
     success: {
@@ -46,6 +47,7 @@ export default function Contact() {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
+    setEmailLoading(true);
     const data = new FormData(e.currentTarget);
     try {
       const response = await fetch("/api/contact", {
@@ -53,15 +55,22 @@ export default function Contact() {
         body: new URLSearchParams(data),
       });
       if (!response.ok) {
+        setEmailLoading(false);
         setSendEmailStatus("fail");
+        setOpenModal(true);
       }
 
       setClientName(e.target.name.value.split(" ")[0]);
+      e.target.reset();
+      setEmailLoading(false);
       setSendEmailStatus("success");
+      setOpenModal(true);
 
       // e.target.reset();
     } catch (err) {
+      setEmailLoading(false);
       setSendEmailStatus("fail");
+      setOpenModal(true);
     }
   }
 
@@ -128,7 +137,9 @@ export default function Contact() {
                 ></textarea>
               </div>
               <div className="button block mt-8">
-                <button type="submit">{t("submitButton")}</button>
+                <Button type="submit" loading={emailLoading}>
+                  {t("submitButton")}
+                </Button>
               </div>
             </form>
           </div>
