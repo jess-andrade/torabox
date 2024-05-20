@@ -51,7 +51,7 @@
     "name": "Nome Completo",
     "message": "Mensagem",
     "modalSuccessTitle": "Seu e-mail foi enviado com sucesso!",
-    "modalSuccessText": "{name}, entraremos em contato assim que possível!`",
+    "modalSuccessText": "{name}, entraremos em contato assim que possível!",
     "modalFailTitle": "Ops! Não foi possível enviar seu e-mail",
     "modalFailText": "Mas não se preocupe. Tente novamente mais tarde!",
     "modalEndingPhrase": "Atenciosamente, equipe Torabox!",

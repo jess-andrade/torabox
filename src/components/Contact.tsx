@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import woman from "../../public/womandark.png";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import SmsFailedIcon from "@mui/icons-material/SmsFailed";
 
 import {
   Button,
@@ -12,17 +14,33 @@ import {
   DialogHeader,
   DialogBody,
   DialogFooter,
-  Typography,
 } from "@material-tailwind/react";
+
+import { Typography } from "@mui/material";
 
 import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const t = useTranslations("Contact");
 
-  const [openModal, setOpenModal] = React.useState(false);
-  const [modalTitle, setModalTitle] = React.useState("");
-  const [modalText, setModalText] = React.useState("");
+  const [openModal, setOpenModal] = React.useState(true);
+  const [clientName, setClientName] = React.useState("John");
+  const [sendEmailStatus, setSendEmailStatus] = React.useState("success");
+
+  const modalProps = {
+    success: {
+      title: t("modalSuccessTitle"),
+      text: t("modalSuccessText", { name: clientName }),
+      color: "#e8e8e8",
+      icon: <EmailOutlinedIcon sx={{ color: "#e8e8e8", fontSize: 40 }} />,
+    },
+    fail: {
+      title: t("modalFailTitle"),
+      text: t("modalFailText"),
+      color: "#e8e8e8",
+      icon: <SmsFailedIcon sx={{ color: "#e8e8e8", fontSize: 40 }} />,
+    },
+  };
 
   const handleOpen = () => setOpenModal(!openModal);
 
@@ -35,22 +53,15 @@ export default function Contact() {
         body: new URLSearchParams(data),
       });
       if (!response.ok) {
-        setOpenModal(true);
-        setModalTitle(t("modalFailTitle"));
-        setModalText(t("modalFailText"));
+        setSendEmailStatus("fail");
       }
 
-      setOpenModal(true);
-      setModalTitle(t("modalSuccessTitle"));
-      setModalText(
-        t("modalSuccessText", { name: e.target.name.value.split(" ")[0] })
-      );
+      setClientName(e.target.name.value.split(" ")[0]);
+      setSendEmailStatus("success");
 
       // e.target.reset();
     } catch (err) {
-      setOpenModal(true);
-      setModalTitle(t("modalFailTitle"));
-      setModalText(t("modalFailText"));
+      setSendEmailStatus("fail");
     }
   }
 
@@ -126,44 +137,29 @@ export default function Contact() {
 
       {/* --------------------------MODAL */}
 
-      <div className="flex min-w-full justify-center items-center bg-blue-500 ">
-        <Dialog open={openModal} handler={handleOpen}>
-          <DialogHeader>
-            <Typography variant="h5" color="blue-gray">
-              {modalTitle}
-            </Typography>
-          </DialogHeader>
+      <Dialog open={openModal} handler={handleOpen} className="bg-[#181b17]">
+        <DialogHeader>
+          <Typography variant="h5" color="#e8e8e8">
+            {modalProps[sendEmailStatus].title}
+          </Typography>
+        </DialogHeader>
 
-          <div className="flex min-w-full justify-center items-center bg-pink-500">
-            <DialogBody divider className="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-16 w-16 text-red-500"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <Typography color="blue-gray" variant="h4">
-                {modalText}
-              </Typography>
-              <Typography className="text-center font-normal">
-                {t("modalEndingPhrase")}
-              </Typography>
-            </DialogBody>
-          </div>
+        <DialogBody divider className="grid place-items-center gap-4">
+          {modalProps[sendEmailStatus].icon}
+          <Typography variant="h5" color="#e8e8e8">
+            {modalProps[sendEmailStatus].text}
+          </Typography>
+          <Typography className="text-center font-normal" color="#fca04f">
+            {t("modalEndingPhrase")}
+          </Typography>
+        </DialogBody>
 
-          <DialogFooter className="space-x-2">
-            <Button variant="text" color="blue-gray" onClick={handleOpen}>
-              X
-            </Button>
-          </DialogFooter>
-        </Dialog>
-      </div>
+        <DialogFooter className="space-x-2">
+          <Button variant="outlined" color="white" onClick={handleOpen}>
+            Ok!
+          </Button>
+        </DialogFooter>
+      </Dialog>
     </section>
   );
 }
