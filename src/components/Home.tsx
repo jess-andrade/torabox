@@ -16,11 +16,11 @@ export default function Home() {
     <>
       <section id="home">
         {/* main container */}
-        <div className="flex flex-wrap flex-row bg-[url('/wpp2.png')] w-full min-h-screen">
+        <div className="flex flex-wrap flex-row bg-[url('/wpp2.png')] min-w-screen min-h-screen">
           {/* content */}
-          <div className="flex min-w-full flex-row items-center justify-around ">
+          <div className="flex w-screen md:min-w-full flex-row items-center  md:justify-around  ">
             {/* title, subtitle and text */}
-            <div className="flex flex-wrap min-w-[45%] flex-col justify-center">
+            <div className="flex flex-wrap flex-col justify-center md:min-w-[45%] ">
               <motion.div
                 initial={{ x: -100, scale: 0.8, opacity: 0 }}
                 whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <Link href={`#about`} className=" flex self-end">
+              <Link href={`#about`} className=" flex self-center md:self-end">
                 <DownButton text={t("learnMoreButton")} />
               </Link>
             </div>
