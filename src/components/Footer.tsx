@@ -20,7 +20,7 @@ export default function Footer() {
     <>
       <section id="footer">
         {/* main container */}
-        <div className="flex flex-col bg-[#181b17] min-w-full min-h-60 pt-10 justify-center ">
+        <div className="flex flex-col bg-[#181b17] min-w-full min-h-60 pt-10 justify-center pb-10">
           {/* content */}
           <div className="flex flex-wrap flex-row items-center justify-around">
             {/* ------------ title */}
