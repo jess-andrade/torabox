@@ -12,11 +12,9 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <ThemeProvider theme={theme}>
+      <Navbar />
       <div className="container-global">
-        <main className="main-container">
-          <Navbar />
-          {children}
-        </main>
+        <main className="main-container">{children}</main>
       </div>
     </ThemeProvider>
   );
