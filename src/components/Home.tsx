@@ -20,7 +20,7 @@ export default function Home() {
           {/* content */}
           <div className="flex w-screen md:min-w-full flex-row items-center  md:justify-around  ">
             {/* title, subtitle and text */}
-            <div className="flex flex-wrap flex-col justify-center md:min-w-[45%] ">
+            <div className="flex flex-wrap flex-col justify-center md:min-w-[50%] ">
               <motion.div
                 initial={{ x: -100, scale: 0.8, opacity: 0 }}
                 whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
@@ -43,7 +43,7 @@ export default function Home() {
                 <DownButton text={t("learnMoreButton")} />
               </Link>
             </div>
-            <div className="flex min-w-[400px] bg-orange-500"></div>
+            <div className="flex min-w-[400px]"></div>
           </div>
         </div >
       </section >

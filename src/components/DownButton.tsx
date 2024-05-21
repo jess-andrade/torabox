@@ -13,7 +13,7 @@ export interface DownButtonProps {
 
 export default function DownButton({ text }: DownButtonProps) {
   return (
-    <Box sx={{ "& > :not(style)": { m: 1, backgroundColor: "#fca04f" } }}>
+    <Box sx={{ "& > :not(style)": { m: 1, backgroundColor: "white" } }}>
       <Fab variant="extended" sx={{}}>
         <KeyboardArrowDownIcon sx={{ mr: 1 }} />
         {text}
