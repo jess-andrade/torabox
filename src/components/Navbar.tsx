@@ -20,6 +20,7 @@ import BrazilFlag from "../../public/flags/brazil.svg";
 import UsaFlag from "../../public/flags/usa.svg";
 import ItalyFlag from "../../public/flags/italy.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 function Navbar() {
   const t = useTranslations("Menu");
@@ -29,7 +30,11 @@ function Navbar() {
     { name: t("about"), url: "#about" },
     { name: t("contact"), url: "#contact" },
   ];
-  const languages = ["English", "Português", "Italiano"];
+  const languages = [
+    { name: "English", flag: UsaFlag, locale: "en-US" },
+    { name: "Português", flag: BrazilFlag, locale: "pt-BR" },
+    { name: "Italiano", flag: ItalyFlag, locale: "it" },
+  ];
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -169,10 +174,21 @@ function Navbar() {
               onClose={handleCloseLanguageMenu}
             >
               {languages.map((language) => (
-                <MenuItem key={language} onClick={handleCloseLanguageMenu}>
-                  {/* <SvgIcon component={ItalyFlag} inheritViewBox /> */}
-                  <Typography textAlign="center">{language}</Typography>
-                </MenuItem>
+                <Link key={language.name} href={"#"} locale={language.locale}>
+                  <MenuItem onClick={handleCloseLanguageMenu}>
+                    <Image
+                      src={language.flag}
+                      alt="italy-flag"
+                      style={{
+                        width: "20px",
+                        paddingRight: "6px",
+                        marginBottom: "4px",
+                        height: "auto",
+                      }}
+                    />
+                    <Typography textAlign="center">{language.name}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
