@@ -62,26 +62,23 @@ function Navbar() {
     <AppBar position="fixed" sx={{ backgroundColor: "#181b17" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link href={"#home"}>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "#e8e8e8",
-                textDecoration: "none",
-              }}
-            >
-              TORABOX.
-            </Typography>
-          </Link>
-
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#home"
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "#e8e8e8",
+              textDecoration: "none",
+            }}
+          >
+            TORABOX.
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -112,11 +109,11 @@ function Navbar() {
               }}
             >
               {sections.map((section) => (
-                <MenuItem key={section.name} onClick={handleCloseNavMenu}>
-                  <Link href={section.url}>
+                <Link href={section.url} key={section.name}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{section.name}</Typography>
-                  </Link>
-                </MenuItem>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
