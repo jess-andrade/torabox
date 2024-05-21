@@ -71,7 +71,7 @@ export default function Services() {
               <div className="h-1 w-24 bg-[#fca04f] "></div>
 
               {/* subtitle w typewriter */}
-              <div className="text-xl justify-center text-[#f4f4f4] tracking-[.20em] pb-10 min-h-9 pt-6">
+              <div className="text-xl justify-center text-[#f4f4f4] tracking-[.20em] ml-8 md:ml-0 pb-10 min-h-9 pt-6">
                 <Typewriter text={t("subtitle")} delay={200} delayEnd={3200} />
               </div>
             </div>
