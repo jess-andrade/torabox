@@ -63,46 +63,47 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {content.map((cont, index) => (
-            <div className="embla__slide" key={index}>
-              {/* <div className="embla__slide__number">{index + 1} </div> */}
+    // <section className="embla">
+    //   <div className="embla__viewport" ref={emblaRef}>
+    //     <div className="embla__container">
+    //       {content.map((cont, index) => (
+    //         <div className="embla__slide" key={index}>
+    //           {/* <div className="embla__slide__number">{index + 1} </div> */}
 
-              {/* --- content */}
-              <PaperProjects
-                img={cont.img}
-                title={cont.title}
-                text={cont.text}
-                sub={cont.sub}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+    //           {/* --- content */}
+    //           <PaperProjects
+    //             img={cont.img}
+    //             title={cont.title}
+    //             text={cont.text}
+    //             sub={cont.sub}
+    //           />
+    //         </div>
+    //       ))}
+    //     </div>
+    //   </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-        {/* 
+    //   <div className="embla__controls">
+    //     <div className="embla__buttons">
+    //       <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+    //       <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+    //     </div>
+    //     {/*
 
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              color="primary"
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
-                index === selectedIndex ? " embla__dot--selected " : ""
-              )}
-            />
-          ))}
-        </div> */}
-      </div>
-    </section>
+    //     <div className="embla__dots">
+    //       {scrollSnaps.map((_, index) => (
+    //         <DotButton
+    //           color="primary"
+    //           key={index}
+    //           onClick={() => onDotButtonClick(index)}
+    //           className={"embla__dot".concat(
+    //             index === selectedIndex ? " embla__dot--selected " : ""
+    //           )}
+    //         />
+    //       ))}
+    //     </div> */}
+    //   </div>
+    // </section>
+    <></>
   );
 };
 

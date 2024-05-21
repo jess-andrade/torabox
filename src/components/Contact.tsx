@@ -89,7 +89,7 @@ export default function Contact() {
           <div className="flex flex-wrap min-w-[55%]">
             <form className="container" onSubmit={handleSubmit}>
               <div className="flex flex-col justify-center items-center gap-6 ">
-                <h1 className="text-[#fca04f] tracking-[.20em] text-2xl">
+                <h1 className="text-[#e8e8e8] tracking-[.20em] text-2xl">
                   {t("title")}
                 </h1>
                 {/* divider */}

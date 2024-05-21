@@ -26,7 +26,7 @@ export default function Home() {
                 whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="flex flex-col w-[380px]">
+                <div className="flex flex-col w-[350px] md:w-[400px]">
                   <Image src={logo} alt="logo" />
                   {/* <div className="flex flex-row text-[#f1f5f9] font-bold text-5xl tracking-[.24em]">
                     {" "}
@@ -45,8 +45,8 @@ export default function Home() {
             </div>
             <div className="flex min-w-[400px]"></div>
           </div>
-        </div >
-      </section >
+        </div>
+      </section>
     </>
   );
 }
