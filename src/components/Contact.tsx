@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import woman from "../../public/call.png";
+import woman from "../../public/womandark.png";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import SmsFailedIcon from "@mui/icons-material/SmsFailed";
 
