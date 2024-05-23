@@ -26,7 +26,7 @@ export default function Home() {
                 whileInView={{ x: 0, scale: 1.0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="flex flex-col w-[350px] md:w-[400px]">
+                <div className="flex flex-col w-[300px] md:w-[340px]">
                   <Image src={logo} alt="logo" />
                   {/* <div className="flex flex-row text-[#f1f5f9] font-bold text-5xl tracking-[.24em]">
                     {" "}

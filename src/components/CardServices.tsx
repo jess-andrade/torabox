@@ -50,7 +50,7 @@ export default function CardServices({ text, title, icon }: CardProps) {
           maxWidth: 220,
           height: 290,
           gap: 4,
-          boxShadow: 20,
+          boxShadow: 40,
           backgroundColor: "#f4f4f4",
           borderRadius: 4,
           padding: 5,

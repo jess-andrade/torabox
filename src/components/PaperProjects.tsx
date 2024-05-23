@@ -26,19 +26,19 @@ export default function PaperProjects({ img, text, title, sub }: CardProps) {
         },
       }}
     >
-      <Paper elevation={4}>
-        <div className="flex items-center">
+      <Paper elevation={2}>
+        <div className="flex items-center m-4">
           {/* --------- content */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-1 ">
             {/* --------- text */}
-            <div className="flex flex-col items-center min-w-full text-justify gap-3">
-              <div className="text-[#fca04f] text-sm font-bold m-4">{sub}</div>
-              <h1 className="text-xl font-bold pb-2 text-[#262923]">{title}</h1>
-              <p className="text-sm text-[#9a9793] mx-4 ">{text}</p>
+            <div className="flex flex-col items-start min-w-screen text-justify gap-y-3 mt-3  ">
+              <div className="text-[#fca04f] text-sm font-bold">{sub}</div>
+              <h1 className="text-xl font-bold text-[#262923]">{title}</h1>
+              <p className="text-sm text-[#9a9793] pb-4">{text}</p>
             </div>
 
             {/* --------- img */}
-            <div className="flex max-w-[400px] h-full">{img}</div>
+            <div className="flex max-w-[350px] h-[170px]">{img}</div>
           </div>
         </div>
       </Paper>

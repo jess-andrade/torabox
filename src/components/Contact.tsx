@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import woman from "../../public/womandark.png";
+import woman from "../../public/call.png";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import SmsFailedIcon from "@mui/icons-material/SmsFailed";
 
@@ -77,7 +77,7 @@ export default function Contact() {
   return (
     <section id="contact">
       {/* main container */}
-      <div className="flex flex-wrap bg-[#262923] min-w-full min-h-screen justify-center">
+      <div className="flex flex-wrap bg-[url('/black_paper.png')] min-w-full min-h-screen justify-center">
         {/* content */}
         <div className="flex flex-wrap flex-row items-center min-w-full pt-20 justify-around gap-y-8 ">
           {/* --------------img */}
