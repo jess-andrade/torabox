@@ -40,9 +40,12 @@
     "secondProjectCategory": "MOBILE APP",
     "secondProjectTitle": "Dreamland",
     "secondProjectDescription": "App with a collection of stories and relaxing music to help children sleep",
-    "thirdProjectCategory": "MOBILE APP",
-    "thirdProjectTitle": "Finances",
-    "thirdProjectDescription": "App for financial management, with money-saving tips"
+    "thirdProjectCategory": "LANDING PAGE",
+    "thirdProjectTitle": "Sol - Inspeção Veicular",
+    "thirdProjectDescription": "Sol Inspeção Veicular's Landing Page",
+    "fourthProjectCategory": "MOBILE APP",
+    "fourthProjectTitle": "World Autistic",
+    "fourthProjectDescription": "Mobile App focused on autistic children"
   },
   "Contact": {
     "title": "REQUEST A QUOTE",

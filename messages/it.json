@@ -40,9 +40,12 @@
     "secondProjectCategory": "MOBILE APP",
     "secondProjectTitle": "Storie della buonanotte",
     "secondProjectDescription": "Applicazione con una raccolta di storie e musica rilassanti per aiutare i bambini a dormire",
-    "thirdProjectCategory": "MOBILE APP",
-    "thirdProjectTitle": "Finanza",
-    "thirdProjectDescription": "Applicazione per controllare le finanze, con consigli di risparmio"
+    "thirdProjectCategory": "LANDING PAGE",
+    "thirdProjectTitle": "Sol - Inspeção Veicular",
+    "thirdProjectDescription": "Landing Page di Sol Inspeção Veicular",
+    "fourthProjectCategory": "MOBILE APP",
+    "fourthProjectTitle": "World Autistic",
+    "fourthProjectDescription": "App mobile focalizzata sui bambini autistici"
   },
   "Contact": {
     "title": "RICHIEDI UN PREVENTIVO",

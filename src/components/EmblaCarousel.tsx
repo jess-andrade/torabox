@@ -20,7 +20,8 @@ type PropType = {
 // ---------------------------- Images
 import kuromi from "../../public/projects/1.png";
 import dreamland from "../../public/projects/2.png";
-import money from "../../public/projects/3.png";
+import sol from "../../public/projects/3.png";
+import worldAutistic from "../../public/projects/4.png";
 
 import { useTranslations } from "next-intl";
 
@@ -42,10 +43,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       sub: t("secondProjectCategory"),
     },
     {
-      img: <Image src={money} alt="money" />,
+      img: <Image src={sol} alt="sol" />,
       title: t("thirdProjectTitle"),
       text: t("thirdProjectDescription"),
       sub: t("thirdProjectCategory"),
+    },
+    {
+      img: <Image src={worldAutistic} alt="world-autistic" />,
+      title: t("fourthProjectTitle"),
+      text: t("fourthProjectDescription"),
+      sub: t("fourthProjectCategory"),
     },
   ];
 

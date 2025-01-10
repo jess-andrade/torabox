@@ -40,9 +40,12 @@
     "secondProjectCategory": "MOBILE APP",
     "secondProjectTitle": "Histórias para dormir",
     "secondProjectDescription": "Aplicativo com uma coletânea de histórias e músicas relaxantes para ajudar crianças a dormirem",
-    "thirdProjectCategory": "MOBILE APP",
-    "thirdProjectTitle": "Finanças",
-    "thirdProjectDescription": "Aplicativo para controlar finanças, com dicas de economias"
+    "thirdProjectCategory": "LANDING PAGE",
+    "thirdProjectTitle": "Sol - Inspeção Veicular",
+    "thirdProjectDescription": "Landing Page para a empresa Sol Inspeção Veicular",
+    "fourthProjectCategory": "MOBILE APP",
+    "fourthProjectTitle": "World Autistic",
+    "fourthProjectDescription": "Aplicativo mobile focado em crianças autistas"
   },
   "Contact": {
     "title": "SOLICITAR ORÇAMENTO",
